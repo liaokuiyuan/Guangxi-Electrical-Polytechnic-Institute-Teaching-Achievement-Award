@@ -1,0 +1,583 @@
+@charset "utf-8";
+/*reset*/
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* 全局背景 */
+body {
+    background: url("../new%20images/背景.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 页面切换过渡 - 仅内容区淡入淡出 */
+.container > div:not(.main1):not(.main2) {
+    animation: pageIn 0.4s ease-out;
+}
+
+@keyframes pageIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body.page-out .container > div:not(.main1):not(.main2) {
+    animation: pageOut 0.4s ease-in forwards;
+}
+
+@keyframes pageOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+ul, li, dl, dd {
+    list-style: none;
+}
+
+a {
+    text-decoration-line: none;
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin: 0px auto;
+}
+
+input, textarea {
+    outline-style: none;
+}
+
+.wid82 {
+    width: 82rem;
+    margin: 0 auto;
+}
+
+.wid67 {
+    width: 67rem;
+    margin: 0 auto;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-block {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+/*超出省略号*/
+.text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.text-ellipsis2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-ellipsis3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.text-ellipsis6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/*5列 start*/
+.layui-col-lg2-4, .layui-col-md2-4, .layui-col-sm2-4, .layui-col-xs2-4 {
+    position: relative;
+    display: block;
+    box-sizing: border-box
+}
+
+.layui-col-xs2-4 {
+    float: left
+}
+
+.layui-col-xs2-4 {
+    width: 19.9999992%
+}
+
+.layui-col-xs-offset2-4 {
+    margin-left: 19.9999992%
+}
+
+@media screen and (min-width: 768px) {
+
+    .layui-col-sm2-4 {
+        float: left
+    }
+
+    .layui-col-sm2-4 {
+        width: 19.9999992%
+    }
+
+    .layui-col-sm-offset2-4 {
+        margin-left: 19.9999992%
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .layui-col-md2-4 {
+        float: left
+    }
+
+    .layui-col-md2-4 {
+        width: 19.9999992%
+    }
+
+    .layui-col-md-offset2-4 {
+        margin-left: 19.9999992%
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .layui-col-lg2-4 {
+        float: left
+    }
+
+    .layui-col-lg2-4 {
+        width: 19.9999992%
+    }
+
+    .layui-col-lg-offset2-4 {
+        margin-left: 19.9999992%
+    }
+}
+
+/*5列 end*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.main3 {
+    flex: 1;
+}
+
+.preview-video {
+    cursor: pointer;
+}
+
+.main1 {
+    background-color: #014D98;
+    width: 100%;
+    height: 10.5rem !important;
+    padding-top: 0;
+}
+
+.main1-body {
+    display: flex;
+    align-items: center;
+    height: 10.5rem !important;
+    width: 96rem !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main1-body img {
+    width: 52.6rem;
+    height: 3.87rem;
+}
+
+.main1-body-search {
+    padding-top: 1.5rem;
+}
+
+.main1-body-search input {
+    border-radius: 0.67rem;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    font-size: 1rem;
+}
+
+.main1-body-search .layui-input-wrap {
+    line-height: 2.3rem;
+}
+
+.main1-body-search .layui-icon {
+    color: #014D98;
+    font-size: 1.5rem;
+}
+
+.main1-body-search .layui-input-suffix {
+    padding: 0;
+}
+
+.main2 {
+    background-color: #014D98;
+    width: 100%;
+    height: 2.65rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main2-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96rem!important;
+}
+
+.main2-body li {
+    height: 2.7rem;
+    line-height: 2.7rem;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    transition: all 0.25s ease;
+}
+
+.main2-body li a {
+    color: #FFF;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0 1.1rem;
+    height: 100%;
+    transition: color 0.25s ease;
+}
+
+.main2-body li.selected, .main2-body li:hover {
+    background-color: #FFFFFF;
+}
+
+.main2-body li.selected a, .main2-body li:hover > a {
+    color: #014D98;
+}
+
+/*foot start*/
+.foot {
+    background-color: #014D98;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem 0.8rem;
+    margin-top: auto;
+}
+/*foot end*/
+
+.left_title a { color: #FFFFFF!important;}
+.layui-menu .layui-menu-item-checked a, .layui-menu .layui-menu-item-checked2 a{
+    color: #FFFFFF!important;
+}
+.wp_pdf_player {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.main_p p{ line-height: 2.1rem;}
+
+.main2-body li a {
+    padding: 0 1.2rem!important;
+}
+/*新版首页头部*/
+.main1-body .header-logo {
+    width: auto!important;
+    height: 6.6rem!important;
+    flex-shrink: 0;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+.header-divider {
+    display: none;
+}
+.header-text {
+    color: #FFFFFF;
+    flex: 1;
+}
+.header-text-1 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+.header-text-2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #F0C040;
+    letter-spacing: 0.18em;
+    line-height: 1.3;
+}
+.main1-body .header-title-img {
+    height: 9.4rem!important;
+    width: auto!important;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+.main1-body img {
+    max-width: 100%;
+}
+
+/* 2026 教学成果奖项目统一头部 */
+.main1-body {
+    gap: 2.4rem;
+}
+
+.header-title-text {
+    min-width: 0;
+    flex: 1;
+    color: #F5D586;
+    text-align: left;
+    font-family: "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    text-shadow: 0 0.18rem 0.35rem rgba(0, 0, 0, 0.45);
+}
+
+.header-title-kicker {
+    margin-bottom: 0.55rem;
+    font-size: 2.65rem;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: #F6DE9D;
+}
+
+.header-project-title {
+    font-size: 2rem;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #F2CC72;
+}
+
+/* 放大一级导航，并为成果申报增加二级菜单 */
+.main2 {
+    height: 3.15rem;
+}
+
+.main2-body {
+    justify-content: center;
+    gap: 0.08rem;
+}
+
+.main2-body li {
+    height: 3.15rem;
+    line-height: 3.15rem;
+}
+
+.main2-body li a {
+    font-size: 1.3rem;
+    padding: 0 0.96rem !important;
+}
+
+.main2-body .nav-has-submenu {
+    z-index: 1001;
+}
+
+.nav-has-submenu > a::after {
+    content: "▾";
+    display: inline-block;
+    margin-left: 0.38rem;
+    font-size: 0.82em;
+    transition: transform 0.2s ease;
+}
+
+.nav-has-submenu.submenu-open > a::after {
+    transform: rotate(180deg);
+}
+
+.main2-body .nav-submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 10.5rem;
+    padding: 0.35rem 0;
+    background: #FFFFFF;
+    border-radius: 0 0 0.45rem 0.45rem;
+    box-shadow: 0 0.45rem 1rem rgba(1, 77, 152, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -0.4rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.main2-body .nav-has-submenu:hover .nav-submenu,
+.main2-body .nav-has-submenu:focus-within .nav-submenu,
+.main2-body .nav-has-submenu.submenu-open .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.main2-body .nav-submenu li {
+    display: block;
+    width: 100%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background: #FFFFFF;
+}
+
+.main2-body .nav-submenu li a {
+    height: 2.8rem;
+    padding: 0 1.2rem !important;
+    color: #014D98 !important;
+    font-size: 1.12rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.main2-body .nav-submenu li a:hover,
+.main2-body .nav-submenu li a.current {
+    color: #FFFFFF !important;
+    background: #005699;
+}
+
+/* PDF 阅读页：二级栏目上移，正文区域放宽 */
+.pdf-page > .wid82 {
+    width: 96rem;
+}
+
+.pdf-page .main-list-title {
+    justify-content: flex-start;
+    gap: 1.15rem;
+    height: auto;
+    min-height: 3.4rem;
+    line-height: normal;
+}
+
+.pdf-page .main-list-title-1 {
+    flex-shrink: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+.pdf-subnav {
+    display: flex;
+    align-items: center;
+    gap: 0.48rem;
+    align-self: flex-start;
+    padding-top: 0.18rem;
+}
+
+.pdf-subnav a,
+.pdf-subnav button,
+.pdf-subnav span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.35rem;
+    padding: 0 0.95rem;
+    border: 1px solid #005699;
+    border-radius: 0.28rem;
+    color: #014D98;
+    background: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.35;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.pdf-subnav a:hover,
+.pdf-subnav button:hover,
+.pdf-subnav a.active,
+.pdf-subnav button.active,
+.pdf-subnav span.active {
+    color: #FFFFFF;
+    background: #005699;
+}
+
+.pdf-page .main-list-title-2 {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.pdf-page .pdf-sidebar-source {
+    display: none !important;
+}
+
+.pdf-page .pdf-content-column {
+    width: 100% !important;
+}
+
+.pdf-page .main3-body-right {
+    height: 72rem;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.pdf-page .wp_pdf_player {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-page .pdf-panel {
+    display: none;
+    height: 100%;
+}
+
+.pdf-page .pdf-panel.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-page .pdf-panel .main3-body-right-title {
+    flex: 0 0 auto;
+}
+
+.pdf-page .pdf-panel .wp_pdf_player {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+/* 弹窗（layer）标题栏 —— 统一使用品牌蓝 */
+.layui-layer-title {
+    background: #014D98 !important;
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,323 @@
+/* ========================================
+   首页专属样式
+   ======================================== */
+
+/* --- 成果简介 --- */
+.main3 {
+    padding: 1.2rem 0;
+}
+
+.main3-body {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.main3-body-left {
+    flex: 0 0 48%;
+}
+
+.main3-body-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.main3-body-right {
+    flex: 1;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.main3-body-right-1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005699;
+    padding-bottom: 0.4rem;
+    border-left: 0.25rem solid #005699;
+    padding-left: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.main3-body-right-2 {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 2rem;
+    color: #444;
+    overflow: hidden;
+}
+
+/* --- 查看详情 --- */
+.show-detail {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.show-detail a {
+    color: #005699;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.show-detail a:hover {
+    transform: translateX(4px);
+    color: #014D98;
+}
+
+/* --- 数据亮点 --- */
+.main4 {
+    padding: 1.2rem 0;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    flex: 1;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card .stat-num {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #005699;
+    line-height: 1.2;
+}
+
+.stat-card .stat-num small {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.stat-card .stat-label {
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* --- 第一完成人 --- */
+.main5 {
+    padding: 0.3rem 0 1.2rem;
+}
+
+.person-card {
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.05);
+    align-items: flex-start;
+}
+
+.person-photo {
+    flex-shrink: 0;
+}
+
+.person-photo img {
+    width: 13rem;
+    height: auto;
+    border-radius: 0.4rem;
+}
+
+.person-info {
+    flex: 1;
+}
+
+.person-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #005699;
+    padding-bottom: 0.8rem;
+}
+
+.person-bio {
+    font-size: 1.05rem;
+    line-height: 2rem;
+    color: #555;
+    text-indent: 2em;
+}
+
+/* --- 成果获奖 --- */
+.main6 {
+    padding: 1.2rem 0;
+}
+
+/* 首页 4 行大图区（每行 4 个栏目独立成行）
+   padding: 上下间距 上=下一行标题与上一行图的间隙部分 / 下=本行图底 */
+.home-row {
+    padding: 2.4rem 0 1.6rem;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-head .sh-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    padding-left: 0.8rem;
+    border-left: 0.25rem solid #005699;
+}
+
+.section-head .sh-more a {
+    font-size: 1rem;
+    color: #005699;
+}
+
+.img-grid {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: space-between;
+}
+
+.img-grid .img-item {
+    flex: 1;
+}
+
+.img-grid .img-item img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: fill;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.two-col .col .img-grid .img-item img {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.main6 .two-col .col .img-grid .img-item img {
+    object-fit: fill;
+    aspect-ratio: 3/2;
+}
+
+.img-grid .img-item img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15);
+}
+
+/* --- 媒体报道 --- */
+.main7 {
+    padding: 1.2rem 0;
+}
+
+/* --- 成果应用 + 媒体报道 双栏 --- */
+.main8 {
+    padding: 1.2rem 0 2rem;
+}
+
+.two-col {
+    display: flex;
+    gap: 2rem;
+}
+
+.two-col .col {
+    flex: 1;
+}
+
+.two-col .col .img-grid .img-item img {
+    aspect-ratio: 4/3;
+}
+
+/* ========================================
+   移动端
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .main3-body {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .main3-body-left {
+        flex: auto;
+    }
+    .main3-body-left img {
+        height: auto;
+        max-height: 16rem;
+    }
+    .main3-body-right {
+        padding: 1rem 1.2rem;
+    }
+    .main3-body-right-1 {
+        font-size: 1.2rem;
+    }
+    .main3-body-right-2 {
+        font-size: 0.95rem;
+        line-height: 1.7rem;
+    }
+
+    .stats-row {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    .stat-card {
+        flex: 0 0 calc(50% - 0.4rem);
+        padding: 1.2rem 0.5rem;
+    }
+    .stat-card .stat-num {
+        font-size: 1.8rem;
+    }
+    .stat-card .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .person-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+    }
+    .person-photo img {
+        width: 10rem;
+    }
+    .person-name {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .person-bio {
+        font-size: 0.95rem;
+        line-height: 1.7rem;
+    }
+
+    .img-grid {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+    .img-grid .img-item {
+        flex: 0 0 calc(50% - 0.3rem);
+    }
+
+    .two-col {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section-head .sh-title {
+        font-size: 1.15rem;
+    }
+}

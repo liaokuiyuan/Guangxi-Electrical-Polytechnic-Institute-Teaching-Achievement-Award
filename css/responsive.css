@@ -1,0 +1,775 @@
+@charset "utf-8";
+/* ========================================
+   全局移动端响应式样式
+   覆盖桌面端固定尺寸，适配手机/平板
+   ======================================== */
+
+/* ========== 断点定义 ========== */
+/* 手机: ≤ 768px | 平板: 769-992px | 桌面: ≥ 993px */
+
+/* ========================================
+   1. 全局基础修正
+   ======================================== */
+@media screen and (max-width: 992px) {
+    /* 允许用户缩放，提升可访问性 */
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+
+    /* 容器宽度改为流式 */
+    .wid82, .wid67 {
+        width: 100% !important;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        box-sizing: border-box;
+    }
+}
+
+/* ========================================
+   2. 顶部 Header（main1）
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .main1 {
+        height: auto !important;
+        padding: 0.6rem 0;
+    }
+
+    .main1-body {
+        height: auto !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.6rem;
+    }
+
+    .main1-body .header-logo {
+        height: 3rem !important;
+        width: auto !important;
+    }
+
+    .header-divider {
+        display: none;
+    }
+
+    .main1-body .header-title-img {
+        height: 2.6rem !important;
+        width: auto !important;
+    }
+
+    .main1-body img {
+        width: auto !important;
+        max-width: 95vw !important;
+    }
+}
+
+/* 统一文字标题、成果申报二级导航与 PDF 大版式 */
+@media screen and (max-width: 992px) {
+    .main1-body {
+        gap: 0.8rem !important;
+    }
+
+    .header-title-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-title-kicker {
+        margin-bottom: 0.35rem;
+        font-size: 1.75rem;
+        letter-spacing: 0.12em;
+    }
+
+    .header-project-title {
+        font-size: 1.4rem;
+        line-height: 1.35;
+        letter-spacing: 0.04em;
+    }
+
+    .main2-body li,
+    .main2-body li > a {
+        height: 3rem !important;
+        line-height: 3rem !important;
+    }
+
+    .main2-body li > a {
+        font-size: 1.05rem !important;
+        padding: 0 0.9rem !important;
+    }
+
+    .main2-body .nav-submenu {
+        position: fixed;
+        left: 50%;
+        width: min(16rem, 86vw);
+        transform: translate(-50%, -0.4rem);
+    }
+
+    .main2-body .nav-has-submenu:hover .nav-submenu,
+    .main2-body .nav-has-submenu:focus-within .nav-submenu,
+    .main2-body .nav-has-submenu.submenu-open .nav-submenu {
+        transform: translate(-50%, 0);
+    }
+
+    .pdf-page > .wid82 {
+        width: 100% !important;
+    }
+
+    .pdf-page .main-list-title {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 0.75rem;
+        align-items: center;
+    }
+
+    .pdf-page .main-list-title-1 {
+        min-height: 2.6rem;
+    }
+
+    .pdf-page .pdf-subnav {
+        min-width: 0;
+        overflow-x: auto;
+        padding: 0.1rem 0 0.25rem;
+        scrollbar-width: thin;
+    }
+
+    .pdf-page .pdf-subnav a,
+    .pdf-page .pdf-subnav button,
+    .pdf-page .pdf-subnav span {
+        flex-shrink: 0;
+        min-height: 2.2rem;
+        padding: 0 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .pdf-page .main-list-title-2 {
+        grid-column: 1 / -1;
+        margin-left: 0;
+    }
+
+    .pdf-page .main3-body-right {
+        height: 78vh !important;
+        min-height: 34rem;
+        margin: 0 !important;
+        padding: 0.55rem !important;
+    }
+
+    .pdf-page .wp_pdf_player,
+    .pdf-page .main3-body-right iframe {
+        height: 100% !important;
+        min-height: 32rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-title-kicker {
+        font-size: 1.4rem;
+    }
+
+    .header-project-title {
+        font-size: 1.08rem;
+    }
+}
+
+/* 平板 */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main1 {
+        height: auto !important;
+        padding: 1rem 0;
+    }
+
+    .main1-body {
+        height: auto !important;
+        justify-content: center !important;
+        gap: 1.5rem;
+    }
+
+    .main1-body .header-logo {
+        height: 5.5rem !important;
+        width: auto !important;
+    }
+
+    .header-divider {
+        margin: 0 1.2rem;
+        height: 5rem;
+    }
+
+    .main1-body .header-title-img {
+        height: 6rem !important;
+        width: auto !important;
+    }
+
+    .main1-body img {
+        width: auto !important;
+    }
+}
+
+/* ========================================
+   3. 导航栏（main2）— 手机端横向滚动
+   ======================================== */
+@media screen and (max-width: 992px) {
+    .main2 {
+        height: auto !important;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .main2-body {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        /* 隐藏滚动条 */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 0 !important;
+    }
+
+    .main2-body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main2-body li {
+        flex-shrink: 0;
+        white-space: nowrap;
+        height: 3rem !important;
+        line-height: 3rem !important;
+    }
+
+    .main2-body li a {
+        font-size: 1.05rem !important;
+        padding: 0 0.9rem !important;
+    }
+
+    .main2-body li.selected,
+    .main2-body li:hover {
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    .main2-body li.selected a,
+    .main2-body li:hover > a {
+        color: #FFF !important;
+    }
+
+    /* 右侧渐隐提示 */
+    .main2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 2rem;
+        background: linear-gradient(to right, transparent, #014D98);
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+/* ========================================
+   4. 首页特有区块
+   ======================================== */
+
+/* --- main3：成果简介 --- */
+@media screen and (max-width: 768px) {
+    .main3 {
+        height: auto !important;
+        margin-top: 0.8rem;
+        padding: 0.8rem 0;
+    }
+
+    .main3-body-left img.preview-video {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 14rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .main3-body-right {
+        height: auto !important;
+        padding: 1rem !important;
+        margin-top: 0.8rem;
+    }
+
+    .main3-body-right-2 {
+        height: auto !important;
+        max-height: none !important;
+        font-size: 1rem !important;
+        line-height: 1.8rem !important;
+    }
+
+    .main3 [class*="layui-col-md"] {
+        padding-left: 0 !important;
+    }
+
+    /* 成果简介标题 */
+    .main3-body-right-1 {
+        font-size: 1.2rem !important;
+    }
+
+    .show-detail a {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main3 {
+        height: auto !important;
+    }
+
+    .main3-body-left img.preview-video {
+        height: auto !important;
+        max-height: 18rem;
+    }
+
+    .main3-body-right {
+        height: auto !important;
+        padding: 0.8rem 1.2rem !important;
+    }
+
+    .main3-body-right-2 {
+        height: auto !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* --- main4：第一完成人 --- */
+@media screen and (max-width: 768px) {
+    .main4 {
+        height: auto !important;
+        margin-top: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .main4-body {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 1rem !important;
+    }
+
+    .main4-body-1 {
+        text-align: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .main4-body-1 img {
+        width: 11rem !important;
+        max-width: 80vw;
+        height: auto !important;
+        margin-right: 0 !important;
+        border-radius: 0.5rem;
+    }
+
+    .main4-body-2-1-1 img {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+
+    .main4-body-2-1-2 {
+        font-size: 1.15rem !important;
+    }
+
+    .main4-body-2-2 {
+        font-size: 0.95rem !important;
+        line-height: 1.7rem !important;
+        padding-top: 0.6rem !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main4 {
+        height: auto !important;
+        padding: 1.5rem 0;
+    }
+
+    .main4-body {
+        height: auto !important;
+        padding: 1rem;
+    }
+
+    .main4-body-1 img {
+        width: 10rem !important;
+        height: auto !important;
+    }
+
+    .main4-body-2-2 {
+        font-size: 1rem !important;
+        line-height: 1.8rem !important;
+    }
+}
+
+/* --- main5：按钮区 --- */
+@media screen and (max-width: 768px) {
+    .main5 {
+        padding: 1rem 0.5rem;
+    }
+
+    .main5-body {
+        flex-direction: column !important;
+        gap: 0.8rem;
+    }
+
+    .main5-body img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 24rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main5-body {
+        gap: 1rem;
+    }
+
+    .main5-body img {
+        width: 48% !important;
+        height: auto !important;
+    }
+}
+
+/* --- main6 / main9：成果获奖 / 学生获奖（带背景图） --- */
+@media screen and (max-width: 768px) {
+    .main6, .main9 {
+        height: auto !important;
+        background-image: none !important;
+        background-color: #f5f7fa;
+        padding-bottom: 1rem;
+    }
+
+    .main9 {
+        margin-top: 1rem;
+    }
+
+    .main-list {
+        padding-top: 1rem !important;
+    }
+
+    .main-list-title {
+        height: auto !important;
+        line-height: 2.2rem !important;
+        margin-bottom: 0.8rem !important;
+        flex-wrap: wrap;
+    }
+
+    .main-list-title-1 {
+        font-size: 1.15rem !important;
+    }
+
+    .main-list-title-2 a {
+        font-size: 0.95rem !important;
+    }
+
+    /* 图片网格：2列 */
+    .main-list-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: space-between;
+    }
+
+    .main-list-item > [class*="layui-col"] {
+        width: calc(50% - 0.3rem) !important;
+        flex: none;
+    }
+
+    .main-list-item img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        border-radius: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main6, .main9 {
+        height: auto !important;
+        background-size: cover;
+        padding-bottom: 1.5rem;
+    }
+
+    .main-list-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .main-list-item > [class*="layui-col"] {
+        width: calc(33.333% - 0.55rem) !important;
+        flex: none;
+    }
+
+    .main-list-item img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   5. 内页通用（成果简介/获奖/申报书等）
+   ======================================== */
+@media screen and (max-width: 768px) {
+    /* 主内容区 */
+    .main3 .wid82 {
+        width: 100% !important;
+        padding: 0 0.6rem;
+        box-sizing: border-box;
+    }
+
+    /* 面包屑 */
+    .main-list-title {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        height: auto !important;
+        line-height: 2rem !important;
+    }
+
+    .main-list-title-2 {
+        font-size: 0.85rem !important;
+        padding-top: 0 !important;
+    }
+
+    /* 侧边栏 + 内容 两栏 → 上下堆叠 */
+    .main3-body.layui-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main3-body .layui-col-md3,
+    .main3-body .layui-col-md4,
+    .main3-body .layui-col-md9,
+    .main3-body .layui-col-md8 {
+        width: 100% !important;
+        flex: none;
+    }
+
+    /* 侧边栏 */
+    .main3-body-left {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 0.8rem;
+    }
+
+    /* 内容区（PDF等） */
+    .main3-body-right,
+    .main4-body-right {
+        height: auto !important;
+        min-height: 50vh;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 1rem !important;
+        border-radius: 0.5rem !important;
+    }
+
+    /* PDF iframe — 必须给明确高度而非 % ，父容器已 auto */
+    .wp_pdf_player {
+        height: 75vh !important;
+        min-height: 24rem;
+    }
+
+    /* 侧边菜单 */
+    .layui-menu {
+        width: 100% !important;
+    }
+
+    .layui-menu-body-title {
+        font-size: 0.9rem !important;
+        padding: 0.5rem 0.8rem !important;
+    }
+
+    /* 内页标题 */
+    .main3-body-right-title {
+        font-size: 1.3rem !important;
+    }
+
+    .main3-body-right-content {
+        font-size: 0.9rem !important;
+        line-height: 1.7rem !important;
+    }
+
+    /* 图片居中 */
+    .main3-body-right-img img {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main3 .wid82 {
+        width: 100% !important;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* 平板：侧边栏30% + 内容70% */
+    .main3-body .layui-col-md3,
+    .main3-body .layui-col-md4 {
+        width: 30% !important;
+    }
+
+    .main3-body .layui-col-md9,
+    .main3-body .layui-col-md8 {
+        width: 70% !important;
+    }
+
+    .main3-body-right,
+    .main4-body-right {
+        height: auto !important;
+        min-height: 50vh;
+        margin-left: 0.5rem !important;
+        margin-right: 0 !important;
+    }
+
+    .main3-body-left {
+        padding-left: 0 !important;
+    }
+
+    .wp_pdf_player {
+        height: 75vh !important;
+        min-height: 26rem;
+    }
+}
+
+/* ========================================
+   6. 主要完成人页面
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .sidebar-item .layui-menu-body-title {
+        font-size: 0.85rem !important;
+        white-space: normal !important;
+        line-height: 1.4 !important;
+        padding: 0.5rem !important;
+    }
+
+    .left_title {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ========================================
+   7. 底部
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .foot {
+        height: auto !important;
+        line-height: 1.6 !important;
+        padding: 1rem 0.8rem;
+        font-size: 0.85rem !important;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .foot {
+        height: auto !important;
+        line-height: 1.6 !important;
+        padding: 1rem;
+        font-size: 0.95rem !important;
+    }
+}
+
+/* ========================================
+   8. 成果申报书 / 成果应用 / 媒体报道 等图片列表页
+   ======================================== */
+@media screen and (max-width: 768px) {
+    /* PDF 容器 */
+    .main3-body-right iframe {
+        width: 100% !important;
+        height: 70vh !important;
+    }
+
+    /* 图片列表在内容区的展示 */
+    .main4-body-right img,
+    .main3-body-right img {
+        max-width: 100%;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   9. 课程库 / 专著教材 侧边栏 pin 行为修复
+   ======================================== */
+@media screen and (max-width: 768px) {
+    .main3-body-left.pinned {
+        position: static !important;
+        width: 100% !important;
+        left: auto !important;
+        z-index: auto !important;
+    }
+
+    .sidebar-placeholder {
+        display: none !important;
+    }
+
+    /* gallery 图片全宽 */
+    .gallery img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   10. 触摸优化
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* 增大点击区域 */
+    .main2-body li a,
+    .layui-menu-body-title,
+    .show-detail a,
+    .main-list-title-2 a {
+        min-height: 2.8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .main2-body li a {
+        justify-content: center;
+    }
+
+    /* 移除 hover 依赖，改用 active */
+    .main5-body img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .main-list-item img:hover {
+        transform: none;
+        box-shadow: 0 0.27rem 0.67rem 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .show-detail a:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   11. 极小屏 (< 375px)
+   ======================================== */
+@media screen and (max-width: 374px) {
+    html {
+        font-size: 9px !important;
+    }
+
+    .main1-body .header-logo {
+        height: 3.2rem !important;
+    }
+
+    .main1-body .header-title-img {
+        height: 2.8rem !important;
+    }
+
+    .main-list-item > [class*="layui-col"] {
+        width: 100% !important;
+    }
+
+    .main3-body-right,
+    .main4-body-right {
+        padding: 0.6rem !important;
+    }
+}
