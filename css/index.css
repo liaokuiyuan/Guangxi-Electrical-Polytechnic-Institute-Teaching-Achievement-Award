@@ -15,9 +15,6 @@
 
 .main3-body-left {
     flex: 0 0 48%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main3-body-left img {
@@ -27,13 +24,14 @@
     border-radius: 0.5rem;
 }
 
-/* 成果简介区视频（替换原图片）：保持 960/544 比例，容器内居中，不拉伸 */
+/* 成果简介区视频：容器比例与原来的图片一致（1440×912），
+   占位大小与原图相同，避免把右侧"成果简介"面板挤变形；
+   视频按 contain 完整显示，不裁切、不拉伸 */
 .main3-body-left .intro-video {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 100%;
-    aspect-ratio: 960 / 544;
+    aspect-ratio: 1440 / 912;
     object-fit: contain;
     background: #000;
     border-radius: 0.5rem;
@@ -277,7 +275,7 @@
         height: auto;
         max-height: 16rem;
     }
-    /* 手机端视频：整宽自适应，按 960/544 比例缩放，不超高 */
+    /* 手机端视频：整宽自适应，沿用与原图一致的容器比例 */
     .main3-body-left .intro-video {
         width: 100%;
         height: auto;
