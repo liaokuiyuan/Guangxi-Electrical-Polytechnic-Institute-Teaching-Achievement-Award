@@ -47,7 +47,11 @@
     <div class="main3">
         <div class="wid82 main3-body">
             <div class="main3-body-left">
-                <img src="new%20images/大创赛合照.jpg" alt="" class="preview-video">
+                <video class="intro-video" controls playsinline preload="metadata"
+                       poster="new%20images/大创赛合照.jpg">
+                    <source src="videos/intro.mp4" type="video/mp4">
+                    您的浏览器不支持 HTML5 视频播放，请升级浏览器后重试。
+                </video>
             </div>
             <div class="main3-body-right">
                 <div class="main3-body-right-1">成果简介</div>
@@ -143,19 +147,5 @@
 
     <div class="foot">版权所有：广西电力职业技术学院&emsp;&emsp;|&emsp;&emsp;网站备案号：桂ICP备08001145号-1&emsp;&emsp;|&emsp;&emsp;桂公网安备:45010702000119号&emsp;&emsp;|&emsp;&emsp;地址：广西南宁市玉洞大道109号&emsp;&emsp;|&emsp;&emsp;邮编：530007&emsp;&emsp;|&emsp;&emsp;联系电话：0771-2212798    </div>
 </div>
-<script>
-    layui.use(function () {
-        var layer = layui.layer;
-        layui.$('.preview-video').on('click', function () {
-            var loadImage = "<div style='text-align:center;'><img src='videos/1.png' style='max-width:100%; max-height:85vh;' alt='职教出海'></div>"
-            layer.open({
-                type: 1,
-                title: "职教出海",
-                content: loadImage,
-                area: ["90%", "90%"]
-            })
-        });
-    });
-</script>
 </body>
 </html>
