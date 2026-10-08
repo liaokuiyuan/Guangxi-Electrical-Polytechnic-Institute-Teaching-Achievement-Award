@@ -46,6 +46,11 @@
     padding: 1.5rem;
     margin-right: 1.5rem;
     margin-left: 2rem;
+    /* 卡片内部强制纵向排列：标题 -> 照片 -> 简介 -> 获奖情况。
+       改成 flex column 后，照片与文字在结构上不可能再并排（左图右文）。 */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .main3-body-title {
@@ -129,4 +134,89 @@
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* ========================================
+   主要完成人详情页：标题 -> 照片(居中) -> 简介(左对齐) -> 获奖情况
+   ------------------------------------------------------------
+   1) .main4-body-right 已改为 flex column：照片与文字在结构上不可能并排，
+      从根上消除"左图右文"；再用 order 固定视觉顺序。
+   2) 照片尺寸沿用原预留画面，未做改动：
+      · 桌面端原 CSS .main3-body img{height:23.2rem}，占位图 300x400(3:4)
+        -> 预留区 = 高 23.2rem、宽 23.2rem x 3/4 = 17.4rem
+      · 窄屏(<=768px) 原版即占位图原始尺寸 -> 300 x 400
+   3) 照片用 object-fit:cover 铺满预留画面：不拉伸、不变形，
+      多余部分以 object-position:50% 50% 对称裁掉。
+   注意：比例要写在 img 上（aspect-ratio）。不要用 padding-bottom 百分比做外框
+        ——百分比内边距按"包含块宽度"算，外框一旦设了宽度上限就会算出偏高高度。
+   ======================================== */
+
+/* 第 1 行：标题 */
+.main4-body-right > .main3-body-right-title {
+    order: 1;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+/* 第 2 行：照片，独占一行且水平居中 */
+.person-photo-frame {
+    order: 2;
+    align-self: center;             /* 水平居中，不依赖父级 text-align */
+    flex: 0 0 auto;
+    display: block;
+    float: none;
+    clear: both;
+    width: 17.4rem;                 /* = 23.2rem x 3/4，与原预留区一致 */
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+/* 第 3 行：人物简介 + 获奖情况，占满内容宽度、文字左对齐 */
+.main4-body-right > .person-info,
+.main4-body-right > #person-info {
+    order: 3;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    display: block;
+    float: none;
+    clear: both;
+    text-align: left;
+}
+.person-info p,
+.person-info div,
+#person-info p,
+#person-info div {
+    text-align: left;
+}
+
+/* 选择器提高优先级，覆盖 .main3-body img 的固定高度 height:23.2rem */
+.main3-body .person-photo-frame img,
+.main4-body-right .person-photo-frame img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4;            /* 预留画面比例，与原占位图 300x400 一致 */
+    object-fit: cover;              /* 铺满预留画面，不拉伸不变形 */
+    object-position: 50% 50%;       /* 全部居中：多余部分上下/左右对称裁掉 */
+}
+
+/* 老浏览器（无 aspect-ratio）兜底：按原比例等比缩放，不拉伸、不溢出 */
+@supports not (aspect-ratio: 3 / 4) {
+    .main3-body .person-photo-frame img,
+    .main4-body-right .person-photo-frame img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 23.2rem;
+        object-fit: contain;
+    }
+}
+
+/* 窄屏沿用原版预留尺寸 300 x 400 */
+@media screen and (max-width: 768px) {
+    .person-photo-frame {
+        width: 300px;
+    }
 }

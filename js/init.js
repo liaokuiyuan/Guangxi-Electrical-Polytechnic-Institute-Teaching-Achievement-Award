@@ -339,7 +339,24 @@ function bindResizeEvents() {
 })();
 
 /* ========================================
-   7. IE 版本检测（保留兼容）
+   8. 完成人照片加载兜底
+   图床图片加载失败时回退到本地占位图，避免出现破图
+   （error 事件不冒泡，必须用捕获阶段监听；
+     init.js 在 <head> 中同步执行，早于 body 内图片发起请求）
+   ======================================== */
+(function bindPersonPhotoFallback() {
+    document.addEventListener('error', function (event) {
+        var img = event.target;
+        if (!img || img.tagName !== 'IMG') return;
+        if (!img.classList.contains('person-photo-img')) return;
+        if (img.getAttribute('data-fallback') === '1') return;
+        img.setAttribute('data-fallback', '1');
+        img.src = 'images/placeholder.svg';
+    }, true);
+})();
+
+/* ========================================
+   9. IE 版本检测（保留兼容）
    ======================================== */
 function IEVersion() {
     var userAgent = navigator.userAgent;

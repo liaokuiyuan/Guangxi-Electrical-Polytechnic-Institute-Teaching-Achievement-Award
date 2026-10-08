@@ -96,6 +96,14 @@ class RangeHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         else:
             super().copyfile(source, outputfile)
 
+    def end_headers(self):
+        # 本地预览：要求浏览器每次先校验，避免改了 CSS/JS 却仍显示旧页面。
+        # （原实现只发 Last-Modified，浏览器会按启发式规则长时间缓存，
+        #   容易出现"改了样式但页面没变"的假象。）
+        self.send_header("Cache-Control", "no-cache, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        super().end_headers()
+
     def log_message(self, fmt, *args):
         # 精简日志：忽略 Range 造成的刷屏，只保留错误
         if args and str(args[1]).startswith(("4", "5")):
