@@ -248,15 +248,34 @@ function renderPerson(index) {
     document.getElementById('person-info').innerHTML = p.bio_html;
     var photoEl = document.getElementById('person-photo');
     if (photoEl) {
+        var want = p.photo || 'images/placeholder.svg';
         photoEl.alt = '第' + ord + '完成人：' + p.name;
-        photoEl.src = p.photo || 'images/placeholder.svg';
+        if (photoEl.getAttribute('src') !== want) {
+            // 先预加载好再替换，避免点击后空白等待；命中缓存时几乎瞬时
+            var pre = new Image();
+            pre.onload = function () { photoEl.src = want; };
+            pre.onerror = function () {
+                if (want !== 'images/placeholder.svg') photoEl.src = 'images/placeholder.svg';
+            };
+            pre.src = want;
+        }
     }
 
     var items = document.querySelectorAll('.sidebar-item');
     items.forEach(function(item) { item.classList.remove('active'); });
     items[index].classList.add('active');
 
-    window.location.hash = (seq < 10 ? '0' : '') + seq;
+    // 用 replaceState 记录当前人员编号：不新增历史记录，也不会触发页面跳转/滚动
+    var code = (seq < 10 ? '0' : '') + seq;
+    try {
+        if (window.history && history.replaceState) {
+            history.replaceState(null, '', '#' + code);
+        } else {
+            window.location.hash = code;
+        }
+    } catch (err) {
+        // file:// 等不允许改写地址的场景，忽略即可（不影响切换）
+    }
 }
 
 document.getElementById('sidebar-menu').addEventListener('click', function(e) {
@@ -265,6 +284,21 @@ document.getElementById('sidebar-menu').addEventListener('click', function(e) {
     var index = parseInt(item.getAttribute('data-index'));
     renderPerson(index);
 });
+
+/* 打开页面后静默预加载全部完成人照片，点击切换时无需再等待下载 */
+function preloadPersonPhotos() {
+    persons.forEach(function (p) {
+        if (!p.photo) return;
+        var img = new Image();
+        if ('decoding' in img) { img.decoding = 'async'; }
+        img.src = p.photo;
+    });
+}
+if (window.requestIdleCallback) {
+    requestIdleCallback(preloadPersonPhotos, { timeout: 2000 });
+} else {
+    window.addEventListener('load', function () { setTimeout(preloadPersonPhotos, 200); });
+}
 
 (function() {
     var hash = window.location.hash.replace('#', '');
