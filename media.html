@@ -5,10 +5,214 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-   <title>媒体报道-高职创新创业教育生态共同体的构建与实践</title>
+    <title>媒体报道-高职创新创业教育生态共同体的构建与实践</title>
     <link type="text/css" rel="stylesheet" href="./css/layui.css"/>
     <link type="text/css" rel="stylesheet" href="./css/common.css"/>
     <link type="text/css" rel="stylesheet" href="./css/cghj.css"/>
+    <style>.media-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+/* 内容区沿用站内 PDF 阅读页的框架：卡片高度固定 60rem，
+   条目在卡片内部滚动，页脚不会被长列表顶到页面中间。
+   min-height:0 是 flex 子项能出现滚动条的关键。 */
+.media-card {
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+}
+
+.media-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.4rem;
+}
+
+.media-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.media-scroll::-webkit-scrollbar-thumb {
+    background: #C8D2DE;
+    border-radius: 0.2rem;
+}
+
+.media-scroll::-webkit-scrollbar-thumb:hover {
+    background: #014D98;
+}
+
+.media-search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.media-search input {
+    width: 12rem;
+    height: 2.1rem;
+    padding: 0 0.7rem;
+    border: 1px solid #C8D2DE;
+    border-radius: 0.3rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.media-search input:focus {
+    border-color: #014D98;
+}
+
+.media-count {
+    color: #7A8798;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.media-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.62rem 0.2rem;
+    border-bottom: 0.06rem dashed #E3E8EF;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.media-list .dot {
+    flex: 0 0 auto;
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-top: 0.62rem;
+    background: #C0392B;
+    border-radius: 0.05rem;
+}
+
+.media-list .title {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: #014D98;
+}
+
+.media-list .title:hover {
+    color: #C0392B;
+    text-decoration: underline;
+}
+
+.media-list .tag {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0 0.4rem;
+    border: 1px solid #C8D2DE;
+    border-radius: 0.2rem;
+    color: #7A8798;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    vertical-align: 0.12rem;
+    white-space: nowrap;
+}
+
+.media-list .meta {
+    flex: 0 0 auto;
+    color: #6B7A8D;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+.media-list .meta .site {
+    margin-right: 0.65rem;
+}
+
+.media-more {
+    margin-top: 0.5rem;
+}
+
+.media-more summary {
+    color: #005699;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.media-more .more-link {
+    display: block;
+    padding: 0.28rem 0 0.28rem 1rem;
+    color: #014D98;
+    font-size: 0.92rem;
+}
+
+.media-more .more-link:hover {
+    color: #C0392B;
+    text-decoration: underline;
+}
+
+.media-empty {
+    padding: 2rem 0;
+    color: #7A8798;
+    text-align: center;
+}
+
+.media-pager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-top: 1.2rem;
+}
+
+.media-pager button {
+    min-width: 2.1rem;
+    height: 2.1rem;
+    padding: 0 0.55rem;
+    border: 1px solid #C8D2DE;
+    border-radius: 0.3rem;
+    background: #FFFFFF;
+    color: #014D98;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.media-pager button:hover:not(:disabled) {
+    border-color: #014D98;
+}
+
+.media-pager button.active {
+    border-color: #014D98;
+    background: #014D98;
+    color: #FFFFFF;
+}
+
+.media-pager button:disabled {
+    color: #B7C0CC;
+    cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    .media-list li {
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+
+    .media-list .meta {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    .media-search {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .media-search input {
+        width: 100%;
+    }
+}</style>
     <script type="text/javascript" src="./js/layui.js"></script>
     <script type="text/javascript" src="./js/init.js"></script>
 </head>
@@ -37,14 +241,14 @@
 		<li><a href="chengxiaoyingyong.html">成效应用</a></li>
 		<li><a href="liluntuiguang.html">理论推广</a></li>
 		<li><a href="fushexiangmeng.html">辐射东盟</a></li>
-		<li class="selected"><a href="https://www.gxdlxy.com/xwdt/mtkdy.htm">媒体报道</a></li>
+		<li class="selected"><a href="media.html">媒体报道</a></li>
 		<li><a href="lingdaorenke.html">领导认可</a></li>
 	</ul>
 </div>
     <div class="main3">
         <div class="wid82">
             <div class="main-list-title">
-                <div class="main-list-title-1">媒体报道 </div>
+                <div class="main-list-title-1">媒体报道</div>
                 <div class="main-list-title-2">您的位置：首页 | 媒体报道 </div>
             </div>
             <div class="main3-body layui-row">
@@ -60,14 +264,155 @@
                     </div>
                 </div>
                 <div class="layui-col-md9">
-                    <div class="main3-body-right">
-                                                <iframe class="wp_pdf_player" src="pdfjs/web/viewer.html?file=../../new%20pdf/%E5%AA%92%E4%BD%93%E6%8A%A5%E9%81%93.pdf" allowfullscreen></iframe>
-                                            </div>
+                    <div class="main3-body-right media-card">
+                        <div class="main3-body-right-title">媒体报道一览</div>
+                        <div class="media-toolbar">
+                            <div class="media-search">
+                                <input id="media-search" type="search" placeholder="搜索标题或媒体" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="media-count" id="media-count"></div>
+                        <div class="media-scroll">
+                            <ul class="media-list" id="media-list"></ul>
+                            <div class="media-empty" id="media-empty" style="display:none;">没有符合条件的报道</div>
+                        </div>
+                        <div class="media-pager" id="media-pager"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="foot">版权所有：广西电力职业技术学院&emsp;&emsp;|&emsp;&emsp;网站备案号：桂ICP备08001145号-1&emsp;&emsp;|&emsp;&emsp;桂公网安备:45010702000119号&emsp;&emsp;|&emsp;&emsp;地址：广西南宁市玉洞大道109号&emsp;&emsp;|&emsp;&emsp;邮编：530007&emsp;&emsp;|&emsp;&emsp;联系电话：0771-2212798    </div>
 </div>
+<script type="text/javascript">
+window.MEDIA_DATA = [{"index":1,"title":"创新思维校企结合广西电职院毕业生成“香饽饽”","category":"双创案例","date":"2015-09-20","sources":[{"site":"广西新闻网","url":"http://edu.gxnews.com.cn/staticpages/20150920/newgx55fe8277-13605832.shtml","date":"2015-09-20"}]},{"index":2,"title":"广西电力职业技术学院2015 中国—东盟职教展参展作品获肯定","category":"双创新闻","date":"2015-09-23","sources":[{"site":"中国教育在线","url":"https://www.eol.cn/guangxi/guangxinews/201509/t_201509231320283.shtml","date":"2015-09-23"}]},{"index":3,"title":"第十一届中国大学生年度人物候选人常双事迹","category":"优秀学生（校友）典型","date":"2016-04-29","sources":[{"site":"人民网－教育频道","url":"http://stu.people.com.cn/n1/2016/0429/c402103-28315159.html","date":"2016-04-29"}]},{"index":4,"title":"广西电力职业技术学院暑期赴恭城开展“三下乡”社会实践服务活动","category":"电亮+（思政）育人案例","date":"2016-08-17","sources":[{"site":"广西八桂职教网","url":"http://www.ep12.com/a/zhijiaoxinwen/tuwenzhijiao/2016/0720/42223.html","date":"2016-08-17"}]},{"index":5,"title":"广西电力职业技术学院“园院协同”育人创佳绩","category":"双创案例","date":"2017-05-05","sources":[{"site":"广西新闻网","url":"http://edu.gxnews.com.cn/staticpages/20170505/newgx590c61d9-16162398.shtml","date":"2017-05-05"}]},{"index":6,"title":"广西电力职业技术学院举办职业教育活动周开放日活动","category":"双创新闻","date":"2017-05-13","sources":[{"site":"广西八桂职教网","url":"http://www.ep12.com/plus/view.php?WebShieldSessionVerify=4C85bQM9bypQqKgNo03A&aid=46504","date":"2017-05-13"}]},{"index":7,"title":"兰海：勇于创新和跨界的电网“多面手”","category":"优秀学生（校友）典型","date":"2019-01-29","sources":[{"site":"中工网-工人日报","url":"https://www.workercn.cn/358/201901/29/190129071751663.shtml","date":"2019-01-29"}]},{"index":8,"title":"广西电力职业技术学院-中关村智酷创新学院揭牌","category":"双创新闻","date":"2019-03-28","sources":[{"site":"南国早报","url":"http://app-h5.ngzb.com.cn/shareArticle?newsid=31744689&app_id=5020&sn=4D1EDE4CD_2AEF2A3166C192DCF68A44DC7C97AF1583D041389FB273B35799C44F02F0F7972273EFAFC89875F4B63322F4F5E02245F3EE7E8858002DC4B52CFA2&platformi_d=3&from=groupmessage","date":"2019-03-28"}]},{"index":9,"title":"广西电力职院举行“创新学院”揭牌","category":"双创新闻","date":"","sources":[{"site":"广西八桂职教网","url":"http://www.ep12.com/a/xinwen/dongtai/2019/0329/61470.html","date":""}]},{"index":10,"title":"广西电力职业技术学院中关村智酷“创新学院”成立","category":"双创新闻","date":"2019-04-01","sources":[{"site":"中国教育新闻网","url":"http://www.jyb.cn/rmtzcg/jzz/201904/t2019040122_1132.html","date":"2019-04-01"}]},{"index":11,"title":"广西职业院校创新创业教学辅导与创新创业项目培训会在广西电力职业技术学院举行","category":"双创新闻","date":"2019-04-25","sources":[{"site":"广西八桂职教网","url":"http://www.ep12.com/a/xinwen/dongtai/2019/0425/62045.html","date":"2019-04-25"}]},{"index":12,"title":"广西电力职业技术学院学子三下乡：带“电”下乡爱“建”于行","category":"电亮+（思政）育人案例","date":"2019-08-06","sources":[{"site":"中国青年网","url":"https://xiaoyuan.cycnet.com.cn/s?signature=vJnXBk5Pw0ALYDjZx8G4ZXXnztLE2YaolKN2Q3yzm6VREOr9pg&uid=1494173&phonecode_=b7d9bd90c0d496009d88f1bcffea7731&scid=435702&time=1566205364&app_version=(null)&sign=8a9a3b4bebe43110cd7dd7d5d1a138a0&appinstall=0&from=gr#","date":"2019-08-06"}]},{"index":13,"title":"打造新时代电力工匠摇篮","category":"电亮+（思政）育人案例","date":"2019-12-25","sources":[{"site":"中国改革报","url":"http://www.cfgw.net.cn/epaper/content/201912/25/content22801.htm","date":"2019-12-25"}]},{"index":14,"title":"90 后代表委员笑脸|马宁：为广西建国内智能一流电网而奋斗","category":"优秀学生（校友）典型","date":"2020-01-16","sources":[{"site":"广西日报","url":"https://mp.weixin.qq.com/s/4RJGg-hKkK7W-_BEZwCHMw","date":"2020-01-16"}]},{"index":15,"title":"南宁：大学生舞龙舞狮队传统技艺舞出精气神","category":"电亮+（思政）育人案例","date":"2020-06-20","sources":[{"site":"广西广播电视台","url":"https://news.gxtv.cn/article/detail7f4972bfa39e430_6ac1fab6b5a8434b3.html?10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1=&from=singlemessage","date":"2020-06-20"}]},{"index":16,"title":"国企开放日活动走进广西电力职院","category":"校企（就业）育人案例","date":"","sources":[{"site":"广西新闻网-广西日报","url":"http://www.gxnews.com.cn/staticpages/20200918/newgx5f63f515-19828176.shtml","date":""}]},{"index":17,"title":"共享产教融合好政策搭建多方共赢新平台广西电力职业技术学院","category":"校企（就业）育人案例","date":"2020-09-18","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2020/0920/c179430-34304525.html","date":"2020-09-18"}]},{"index":18,"title":"广西电力职院：发挥专业优势助力乡村振兴","category":"电亮+（思政）育人案例","date":"2020-12-23","sources":[{"site":"广西日报-广西云客户端","url":"http://resource.cloudgx.cn//files/gxapp/News/202012/23/644925.html?isshare=1&t=1608717978","date":"2020-12-23"}]},{"index":19,"title":"【代表心声】广西“90 后”人大代表马宁：加强边境地区基础设施建设促进对外经济贸易发展","category":"优秀学生（校友）典型","date":"2021-01-22","sources":[{"site":"中央广电总台国际在线","url":"https://gx.cri.cn/chinanews/20210122/3407298b-faef-fe36-69e3-54ef99f6931a.html?fonts=1&nopic=0&userId=&men_uId=b6b0c33a1e594ee59e40b5d248250e1a&languageId=zh&chinaNewsType=app&language=zh","date":"2021-01-22"}]},{"index":20,"title":"“骨干引领、融合双创”——广西电力职院移动互联应用技术示范特色专业及实训基地建设产教融合纪实","category":"电亮+（思政）育人案例","date":"2021-03-16","sources":[{"site":"广西日报","url":"http://resource.cloudgx.cn//files/gxapp/News/202103/16/684508.html?isshare=1&t=1615857597","date":"2021-03-16"}]},{"index":21,"title":"广西电力职业技术学院：需求导向，精益培养数字化“双创”人才","category":"双创案例","date":"2021-06-16","sources":[{"site":"环球网","url":"https://lx.huanqiu.com/article/43Xz2DanJ7B","date":"2021-06-16"}]},{"index":22,"title":"广西电力职业技术学院：精益育人成就出彩人生","category":"双创案例","date":"2021-07-07","sources":[{"site":"环球网","url":"https://lx.huanqiu.com/article/43qGuqqDmWr","date":"2021-07-07"}]},{"index":23,"title":"广西电力职业技术学院：“精益产创团”送教上门，助毛南族振兴奔小康","category":"双创案例","date":"2021-07-07","sources":[{"site":"环球网","url":"https://lx.huanqiu.com/article/43qGkPfDOHA","date":"2021-07-07"}]},{"index":24,"title":"广西电力职业技术学院与南方电网超高压输电公司南宁局共建“产教融合实训基地”","category":"校企（就业）育人案例","date":"2021-07-07","sources":[{"site":"广西日报-广西云客户端","url":"http://resource.cloudgx.cn/files/gxapp/News/202107/07/744397.html?isshare=1&t=1625653345","date":"2021-07-07"}]},{"index":25,"title":"广西电力职业技术学院:让学生成为创新创业生力军","category":"优秀学生（校友）典型","date":"2021-07-13","sources":[{"site":"广西新闻网","url":"https://v.gxnews.com.cn/a/20352621","date":"2021-07-13"}]},{"index":26,"title":"（原表未列标题，详见原文）","category":"其他","date":"","sources":[{"site":"中国职业技术教育网","url":"https://www.chinazy.org/info/1009/8010.htm","date":""}]},{"index":27,"title":"（原表未列标题，详见原文）","category":"其他","date":"2021-07-13","sources":[{"site":"广西八桂职教网","url":"http://www.ep12.com/a/xinwen/dongtai/2021/0712/79675.html","date":"2021-07-13"}]},{"index":28,"title":"广西日报：广西职业院校创新创业教育联盟成立广西职业院校创新创业教育联盟在南宁成立广西职业院校创新创业教育联盟成立","category":"双创新闻","date":"2021-07-08","sources":[{"site":"广西日报","url":"http://resource.cloudgx.cn/files/gxapp/News/202107/08/745053.html?isshare=1&t=1625799590","date":"2021-07-08"}]},{"index":29,"title":"（原表未列标题，详见原文）","category":"其他","date":"2021-07-08","sources":[{"site":"中国新闻网（中新网广西）","url":"https://m.chinanews.com/wap/detail/chs/zw/4693360hapaffedf.shtml","date":"2021-07-08"}]},{"index":30,"title":"（原表未列标题，详见原文）","category":"其他","date":"2021-07-14","sources":[{"site":"广西日报","url":"https://ssw.gxrb.com.cn/json/interface/epaper/api.php?name=gxrb&date=2021-07-14&code=007&xuhao=4","date":"2021-07-14"}]},{"index":31,"title":"南狮舞动“一带一路”以“创”点亮传统文化","category":"双创案例","date":"2021-07-27","sources":[{"site":"中国教育网络电视台","url":"https://tzpy.centv.cn/article/286","date":"2021-07-27"}]},{"index":32,"title":"广西电力职业技术学院实施“三同”改革培养产业升级所需人才","category":"电亮+（思政）育人案例","date":"2022-05-13","sources":[{"site":"中国教育报","url":"http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1_652400938365609402&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5","date":"2022-05-13"}]},{"index":33,"title":"专创赋能，“蚕燃一新”助推广西桑蚕产业转型升级","category":"双创案例","date":"2022-05-24","sources":[{"site":"环球网","url":"https://hqtime.huanqiu.com/share/article/488kJqYxLPU","date":"2022-05-24"}]},{"index":34,"title":"（原表未列标题，详见原文）","category":"其他","date":"2022-05-28","sources":[{"site":"广西日报","url":"https://resource.cloudgx.cn/files/gxapp/News/202205/28/896769.html?isshare=1&t=1653793567","date":"2022-05-28"}]},{"index":35,"title":"电力产业转型升级的人才培养模式实践：产教同频校企同步德技同育","category":"校企（就业）育人案例","date":"2022-06-01","sources":[{"site":"中国教育网络电视台","url":"https://mp.weixin.qq.com/s/qaHYw7osDoaUWiSbZG7W6Q","date":"2022-06-01"}]},{"index":36,"title":"“青星”志愿服务队弘扬文明新风尚","category":"电亮+（思政）育人案例","date":"2022-06-10","sources":[{"site":"筑梦职教","url":"https://mp.weixin.qq.com/s?biz=Mzk2NDQyMTQ3__Mg==&mid=2247543127&idx=2&sn=84ef1f3954e3d00cb78cb3f1216e5122&source=41&poctoken=HPytnmijgrvLbxW8KoQKCnVEYs_hczNssCjOqCU3","date":"2022-06-10"}]},{"index":37,"title":"广西电力职业技术学院双创公益团队助力乡村振兴","category":"双创案例","date":"2022-06-16","sources":[{"site":"环球网","url":"https://lx.huanqiu.com/article/48RXgmrXZfG?qq-pf-to=pcqq.c2c","date":"2022-06-16"}]},{"index":38,"title":"广西电力职业技术学院举行“劳模工匠进学校思政教师进企业”系列活动","category":"电亮+（思政）育人案例","date":"2022-06-17","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2022/0617/c390645-35320185.html","date":"2022-06-17"}]},{"index":39,"title":"广西电力职业技术学院到环江开展“三下乡”活动","category":"电亮+（思政）育人案例","date":"2022-07-15","sources":[{"site":"中共环江县委宣传部","url":"https://mp.weixin.qq.com/s/h0ZN73I6m8JLsZFohfw2bw","date":"2022-07-15"}]},{"index":40,"title":"广西电力职院在第八届中国国际“互联网+”大学生创新创业大赛广西赛区选拔赛中斩获5 项金奖","category":"双创新闻","date":"2022-07-19","sources":[{"site":"广西日报","url":"https://resource.cloudgx.cn/files/gxapp/News/202207/19/922535.html?isshare=1&t=1658230885","date":"2022-07-19"}]},{"index":41,"title":"广西电力职业技术学院：聚力“四项举措”为乡村振兴塑“形”铸“魂”","category":"电亮+（思政）育人案例","date":"2022-08-10","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2022/0810/c179409-40075279.html","date":"2022-08-10"}]},{"index":42,"title":"梦开始的地方|广西电力职业技术学院","category":"电亮+（思政）育人案例","date":"2022-09-04","sources":[{"site":"中国高职高专教育网","url":"https://mp.weixin.qq.com/s?biz=MzA3NzE4OTY4Ng__==&mid=2660216504&idx=2&sn=efac259a7b1893b93687df03121e5671&chksm=842ec9e1b35940f71d306592105c461e4f56a2b477c19d63576105db4ddd3866617e1b6b3a3f&mpshare=1&scene=1&srcid=0904WiRaSniNDs0jdmcmolkt&sharersharetime=","date":"2022-09-04"}]},{"index":43,"title":"广西电职院面向东盟成功举办系列“能源电力”国际化培训","category":"电亮+（思政）育人案例","date":"2022-09-09","sources":[{"site":"中国新闻网","url":"https://baijiahao.baidu.com/s?id=1743488220501900607&wfr=spider&for=pc","date":"2022-09-09"}]},{"index":44,"title":"中国—东盟推进能源电力产能合作与职业教育高质量发展","category":"电亮+（思政）育人案例","date":"2022-10-11","sources":[{"site":"中国新闻网（中新网广西）","url":"https://m.chinanews.com/wap/detail/chs/zw/5321668hcexpzidf.shtml","date":"2022-10-11"}]},{"index":45,"title":"探索“五度”路径共筑电力职教“五化”高地","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"中国教育报","url":"http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1667777554085616043&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5","date":""}]},{"index":46,"title":"广西电力职业技术学院自动化专业群构筑“五型融合”“双创”实践育人大场域","category":"双创案例","date":"2022-11-10","sources":[{"site":"环球网","url":"https://hqtime.huanqiu.com/share/article/4APZQXH8CIz","date":"2022-11-10"}]},{"index":47,"title":"产教“五融合”精益培养“敢闯会创”人才","category":"双创案例","date":"2022-11-10","sources":[{"site":"","url":"https://lx.huanqiu.com/article/4APZVmlVUZY","date":"2022-11-10"}]},{"index":48,"title":"聚焦乡村振兴，“稻亦有道”助力广西宾阳米业走好种、产、销三步棋","category":"双创案例","date":"2022-11-10","sources":[{"site":"","url":"https://hqtime.huanqiu.com/share/article/4APZZKYQXv9","date":"2022-11-10"}]},{"index":49,"title":"广西电力职业技术学院面向马来西亚举办系列能源电力国际化培训","category":"电亮+（思政）育人案例","date":"2023-01-06","sources":[{"site":"广西云-广西新闻网","url":"https://resource.cloudgx.cn/files/gxapp/News/202301/06/990104.html?isshare=1&t=1673005402","date":"2023-01-06"}]},{"index":50,"title":"广西电力职业技术学院构建“匠心星”三“铸”协同育人","category":"电亮+（思政）育人案例","date":"2023-01-11","sources":[{"site":"中国教育网络电视台","url":"https://mp.weixin.qq.com/s?biz=Mzk2NDQyMTQ3__Mg==&mid=2247543352&idx=2&sn=89a0cb465bd97aec7be4771adb8e01dc&source=41&poctoken=HKeon_mij5ioHyMd81nRbLuYhafw2y-wx3dYYxjcQ","date":"2023-01-11"}]},{"index":51,"title":"中泰高校合作培养能源电力人才服务国际产能合作","category":"电亮+（思政）育人案例","date":"2023-03-09","sources":[{"site":"中国新闻网","url":"https://m.chinanews.com/wap/detail/chs/zw/9968756.shtml","date":"2023-03-09"}]},{"index":52,"title":"广西推动与东盟职业院校交流共建培养国际技术技能人才","category":"电亮+（思政）育人案例","date":"2023-04-07","sources":[{"site":"中国新闻网","url":"https://m.chinanews.com/wap/detail/chs/zw/9986187.shtml","date":"2023-04-07"}]},{"index":53,"title":"广西电力职业技术学院打造产教融合共同体建设典范","category":"校企（就业）育人案例","date":"2023-04-07","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2023/0407/c390645-40367425.html","date":"2023-04-07"}]},{"index":54,"title":"全国电力企业院校创新创业工作培训及经验交流会在南宁召开全国电力企业院校创新创业工作培训及经验交流会在南宁召开","category":"双创新闻","date":"2023-04-22","sources":[{"site":"广西日报","url":"https://apph5.cloudgx.cn/article/sync1649788697009508352","date":"2023-04-22"}]},{"index":55,"title":"全国电力企业院校创新创业工作培训及经验交流会召开","category":"其他","date":"2023-04-23","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2023/0423/c390645-40388130.html","date":"2023-04-23"}]},{"index":56,"title":"（原表未列标题，详见原文）","category":"其他","date":"2023-04-24","sources":[{"site":"中国新闻网（中新网广西）","url":"http://www.gx.chinanews.com.cn/kjwt/2023-04-24/detail-ihcnrtzv5406544.shtml","date":"2023-04-24"}]},{"index":57,"title":"广西电力职业技术学院创新非遗文化情景思政课形式","category":"电亮+（思政）育人案例","date":"2023-04-26","sources":[{"site":"广西新闻网","url":"http://edu.gxnews.com.cn/staticpages/20230426/newgx64493e71-21141927.shtml","date":"2023-04-26"}]},{"index":58,"title":"《追光的人》电力保卫者·刘英龙","category":"优秀学生（校友）典型","date":"2023-06-03","sources":[{"site":"人民日报-视界","url":"https://www.pdnews.cn/video/30045155412","date":"2023-06-03"}]},{"index":59,"title":"广西电力职业技术学院双创教育生态赋能创新型工匠培养","category":"双创案例","date":"2023-06-21","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2023/0621/c390645-40466558.html","date":"2023-06-21"}]},{"index":60,"title":"数智赋能·双创聚势，广西电力双创团队助力乡村振兴跑出“加速度”","category":"双创案例","date":"2023-06-19","sources":[{"site":"中国网","url":"http://zgt.china.com.cn/v2/content/2023-06/19/content34691.html","date":"2023-06-19"}]},{"index":61,"title":"（原表未列标题，详见原文）","category":"其他","date":"2023-07-13","sources":[{"site":"新华网","url":"http://www.news.cn/expo/20230713/dab9fe827e764679af86865e04b276e0/c.html","date":"2023-07-13"}]},{"index":62,"title":"广西电力职业技术学院到环江东兴镇、龙岩乡开展社会实践活动","category":"电亮+（思政）育人案例","date":"2023-07-17","sources":[{"site":"环江融媒","url":"https://mp.weixin.qq.com/s/nqPsIVKAba-HWyw-PIHGzw","date":"2023-07-17"}]},{"index":63,"title":"“两网”深融“电”亮匠心构建“三全育人”新生态","category":"电亮+（思政）育人案例","date":"2023-08-04","sources":[{"site":"光明网","url":"https://difang.gmw.cn/2023-08/04/content36745304._htm","date":"2023-08-04"}]},{"index":64,"title":"广西电力职业技术学院：建设文明校园书写发展新篇","category":"电亮+（思政）育人案例","date":"2023-08-10","sources":[{"site":"中国教育新闻网","url":"http://paper.jyb.cn/zgjyb/html/2023-08/10/content627547.ht_m?div=-1","date":"2023-08-10"}]},{"index":65,"title":"“00 后”大学生创业路：致力研发新能源充电桩新技术","category":"优秀学生（校友）典型","date":"2023-08-29","sources":[{"site":"环球网","url":"https://m.huanqiu.com/article/4EKGn5jcwTE","date":"2023-08-29"}]},{"index":66,"title":"广西职业院校创新创业教育联盟\n2023 年度工作会议在南宁召开广西职业院校创新创业教育联盟\n2023 年度工作会议在邕召开携手共创促发展联盟聚力向未来","category":"双创新闻","date":"2023-08-30","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2023/0830/c179464-40551704.html","date":"2023-08-30"}]},{"index":67,"title":"（原表未列标题，详见原文）","category":"其他","date":"2023-08-30","sources":[{"site":"广西日报","url":"https://apph5.cloudgx.cn/article/sync1696855369280204800","date":"2023-08-30"}]},{"index":68,"title":"（原表未列标题，详见原文）","category":"其他","date":"2023-08-30","sources":[{"site":"中国新闻网（中新网广西）","url":"http://www.gx.chinanews.com.cn/kjwt/2023-08-31/detail-ihcssawx3960814.shtml","date":"2023-08-30"}]},{"index":69,"title":"青星聚力红水河科技振“忻”筑未来","category":"电亮+（思政）育人案例","date":"2023-09-01","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2023/0901/c390645-40554202.html","date":"2023-09-01"}]},{"index":70,"title":"广西电力职业技术学院开展暑期中外大学生社会实践活动","category":"电亮+（思政）育人案例","date":"2023-09-01","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2023/0901/c390645-40554182.html","date":"2023-09-01"}]},{"index":71,"title":"广西电力职业技术学院：让非遗“活”起来打造文化育人“潮”品牌","category":"电亮+（思政）育人案例","date":"2023-09-06","sources":[{"site":"中国职业技术教育网","url":"https://www.chinazy.org/info/1009/14447.htm","date":"2023-09-06"}]},{"index":72,"title":"广西电力职业技术学院：共建电力丝路学院培养新能源装备技术国际人才","category":"电亮+（思政）育人案例","date":"2023-09-12","sources":[{"site":"广西教育厅网站","url":"http://jyt.gxzf.gov.cn/jyxw/jyyw/t17141139.shtml","date":"2023-09-12"}]},{"index":73,"title":"广西电力职业技术学院：德技同育培养电力装备智造“匠心”人才","category":"电亮+（思政）育人案例","date":"2023-09-26","sources":[{"site":"中国教育新闻网","url":"http://paper.jyb.cn/zgjyb/html/2023-09/26/content629385.ht_m?div=-1","date":"2023-09-26"}]},{"index":74,"title":"中泰8 校联合办学赋能电力人才培养","category":"电亮+（思政）育人案例","date":"2023-10-10","sources":[{"site":"人民网－广西频道","url":"https://c.m.163.com/news/a/IGN7UEFL0530QRMB.html?from=wapredirect&sp_ss=adappc&referFrom=&s_pssid=2c0dcc4523550e0dcdb794d481f434d3&spsw=1&isFromH5Share=article","date":"2023-10-10"}]},{"index":75,"title":"广西电力职业技术学院“五个一”高位推进毕业生就业创业工作","category":"校企（就业）育人案例","date":"","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1713462659538292736","date":""}]},{"index":76,"title":"广西电力职业技术学院：打造\"数","category":"校企（就业）育人案例","date":"2023-10-15","sources":[{"site":"广西中新网","url":"https://www.gx.chinanews.com.cn/kjwt/2023-10-31/detail-ihcuqerk7378745.shtml","date":"2023-10-15"}]},{"index":77,"title":"“电润文明力践匠心”广西电力职业技术学院的新时代文明实践","category":"电亮+（思政）育人案例","date":"2023-11-14","sources":[{"site":"中国教育网络电视台","url":"https://mp.weixin.qq.com/s/SaZ-gXshcVpJEcRY2efmGw","date":"2023-11-14"}]},{"index":78,"title":"助力产教融合！六堡茶产教融合实践基地成立","category":"电亮+（思政）育人案例","date":"2023-11-21","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1726991365019611136","date":"2023-11-21"}]},{"index":79,"title":"广西电力职业技术学院：融情共育石榴籽构建“四同”民族团结教育工作格局","category":"电亮+（思政）育人案例","date":"2023-12-27","sources":[{"site":"广西画报","url":"https://gxpic.gxrb.com.cn/zjlm/sjbwzy/index.html?url=https://gxpic.gxrb.com.cn/qk/2023n11yzd529q/zd1_91439/154226.json&qUrl=null","date":"2023-12-27"}]},{"index":80,"title":"小小少年打卡电力职院探索新能源汽车的奥秘","category":"电亮+（思政）育人案例","date":"2023-12-27","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1739980805412290560","date":"2023-12-27"}]},{"index":81,"title":"“五心”护航强心理立德树人育“匠心”","category":"电亮+（思政）育人案例","date":"2023-12-30","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2023/1230/c390645-40698780.html","date":"2023-12-30"}]},{"index":82,"title":"青年工匠，锻造你的精彩新赛道","category":"电亮+（思政）育人案例","date":"2024-03-11","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-03-11&code=005&xuhao=2","date":"2024-03-11"}]},{"index":83,"title":"广西电力职业技术学院：精益育人打造双创教育新生态","category":"双创案例","date":"2024-04-03","sources":[{"site":"职教筑梦","url":"https://mp.weixin.qq.com/s?biz=Mzg2ODYzMjQ1M__g==&mid=2247543845&idx=1&sn=eb9f669917e11563bebfaaef680a7cf5&chksm=ceab3ecef9dcb7d8d6629bcccf1666349c7e737dea5f5a49281cbcb79fc0ca9e290379e3f5fc&mpshare=1&scene=23&srcid=0403ZJvsmkQjhSF3IItrytra&sharershareinf","date":"2024-04-03"}]},{"index":84,"title":"广西电力职院：以“六个一”推动龙狮文化创造性转化创新性发展","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1781665477372342272","date":""}]},{"index":85,"title":"广西4 位同学荣登国家奖学金学生代表名录","category":"优秀学生（校友）典型","date":"2024-05-07","sources":[{"site":"八桂教育","url":"https://mp.weixin.qq.com/s/MXjgGaqKMFYzfV3-dY1UVA","date":"2024-05-07"}]},{"index":86,"title":"广西电力职业技术学院：侗乡雅舍","category":"电亮+（思政）育人案例","date":"2024-05-22","sources":[{"site":"学习强国-中央广播电视台","url":"https://article.xuexi.cn/articles/index.html?artid=461_9051717320159656&t=1716446863441&showmenu=false&studystyleid=video__default&source=share&sh_areto=wxsingle&itemid___=4619051717320159656&refreadid=5753d657-__e4f4-4d80-8b0e-758be937174f172269870_5841","date":"2024-05-22"}]},{"index":87,"title":"广西：职业院校齐炫技技能人才展风采","category":"电亮+（思政）育人案例","date":"2024-05-23","sources":[{"site":"新华网","url":"http://gx.news.cn/20240523/f3bebf9b6b3b48d6af94690eeacebb35/c.html","date":"2024-05-23"}]},{"index":88,"title":"人物丨“弄潮”能源新时代创业反哺育人才——广西电力职业技术学院校园创业新星：王俊杰","category":"优秀学生（校友）典型","date":"2024-05-27","sources":[{"site":"八桂之窗","url":"https://mp.weixin.qq.com/s/v7AbbzO8v33uvr-GdYlhXQ","date":"2024-05-27"}]},{"index":89,"title":"校园创业新星王俊杰：从“梦想家”到“创新创业引领者”","category":"优秀学生（校友）典型","date":"2024-05-28","sources":[{"site":"中华网（看点时报）","url":"https://tech.china.com/article/20240528/052024152_6178.html","date":"2024-05-28"}]},{"index":90,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-05-28","sources":[{"site":"凤凰网","url":"https://tech.ifeng.com/c/8ZxEQLWrBRv","date":"2024-05-28"}]},{"index":91,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-05-28","sources":[{"site":"中国日报网（东方网）","url":"https://caijing.chinadaily.com.cn/a/202405/28/WS6655942ea3109f7860ddfccf.html","date":"2024-05-28"}]},{"index":92,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-05-28","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2024/0528/c390645-40859432.html","date":"2024-05-28"}]},{"index":93,"title":"准工匠，秀出看家本领——广西\n2024 年职业教育活动周走笔","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-06-05&code=009&xuhao=1","date":""}]},{"index":94,"title":"联盟聚力促双创共谋发展向未来—广西职业院校创新创业教育联盟2024 年度工作会议在南宁召开","category":"双创新闻","date":"2024-06-23","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2024/0623/c179464-40888544.html","date":"2024-06-23"}]},{"index":95,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-06-23","sources":[{"site":"广西云","url":"https://apph5.cloudgx.cn/article/sync1804883272176930816","date":"2024-06-23"}]},{"index":96,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-06-24","sources":[{"site":"新华网","url":"http://gx.news.cn/20240624/f8a11dd3d32746d198d4762114a4b3e2/c.html","date":"2024-06-24"}]},{"index":97,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-06-24","sources":[{"site":"人民网+","url":"http://app.people.cn/h5/detail/normal/5856756854555648","date":"2024-06-24"}]},{"index":98,"title":"“碳”见未来，引领绿色建材高质量发展","category":"双创案例","date":"2024-07-05","sources":[{"site":"中国网","url":"http://science.china.com.cn/2024-07/05/content42852632._htm","date":"2024-07-05"}]},{"index":99,"title":"（原表未列标题，详见原文）","category":"其他","date":"2024-07-05","sources":[{"site":"中华网","url":"https://tech.china.com/article/20240705/072024154_3961.html","date":"2024-07-05"}]},{"index":100,"title":"校企合作打造电力工匠班","category":"校企（就业）育人案例","date":"2024-07-20","sources":[{"site":"新华网","url":"http://gx.news.cn/20240720/90bab180a36e46b09ee1a77db71c0104/c.html","date":"2024-07-20"}]},{"index":101,"title":"广西电力职业技术学院中国—泰国绿色电力现代工匠学院首届“中文+\n技能”短期项目圆满举办","category":"电亮+（思政）育人案例","date":"2024-07-24","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2024/0724/c390645-40922405.html","date":"2024-07-24"}]},{"index":102,"title":"中泰一家亲职教携手行","category":"电亮+（思政）育人案例","date":"2024-07-25","sources":[{"site":"新华网","url":"http://gx.news.cn/20240725/d73318d5a06a47bebb2acbd527413b6d/c.html","date":"2024-07-25"}]},{"index":103,"title":"党建引领实践育人科技赋能乡村振兴——广西电力职业技术学院人工智能与信息工程学院“智信小蜜蜂”乡村振兴促进团","category":"电亮+（思政）育人案例","date":"2024-07-30","sources":[{"site":"八桂之窗","url":"https://mp.weixin.qq.com/s?biz=Mzg3MzU2NTM4__MA==&mid=2247517631&idx=2&sn=fb6490d0d4d7c1f2b4832cc9cbee11f6&chksm=cfa9b36de44aaa95de761c179aba3a69b1f1dd125cd8765c60f28f8b761f1ffecbb8575c79c4&mpshare=1&scene=23&srcid=0805DQR2ASf9wJVIcLhqCP8s&sharershareinfo","date":"2024-07-30"}]},{"index":104,"title":"“电小潮”中华文化传承团走进凭祥——广西电力职业技术学院开展\n2024 暑期“三下乡”活动","category":"电亮+（思政）育人案例","date":"2024-08-14","sources":[{"site":"新华网","url":"http://gx.news.cn/20240814/df469f7f6f5b4608be059252b8855ae7/c.html","date":"2024-08-14"}]},{"index":105,"title":"广西电力职业技术学院实践团走进凭祥市柳班村板班屯","category":"电亮+（思政）育人案例","date":"2024-08-14","sources":[{"site":"新华网","url":"http://gx.news.cn/20240814/da26e1140e014e2b8b813d8e0df7f514/c.html","date":"2024-08-14"}]},{"index":106,"title":"拉一把，他们飞得更高","category":"优秀学生（校友）典型","date":"2024-08-14","sources":[{"site":"广西云-广西日报","url":"https://apph5.cloudgx.cn/article/sync1823513834267725824","date":"2024-08-14"}]},{"index":107,"title":"“水润未来”开启生态混凝土新篇章","category":"双创案例","date":"2024-08-29","sources":[{"site":"网易新闻","url":"https://www.163.com/news/article/JAP436AK00019UD6.html","date":"2024-08-29"}]},{"index":108,"title":"广西电力职业技术学院“水润未来”双创团队：助力国家海绵城市建设","category":"双创案例","date":"2024-08-30","sources":[{"site":"环球网","url":"https://hqtime.huanqiu.com/share/article/4JETxRYFtyO","date":"2024-08-30"}]},{"index":109,"title":"广西电力职业技术学院铸师魂提素质强队伍打造电力“工匠良师”","category":"电亮+（思政）育人案例","date":"2024-09-10","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-09-10&code=014&xuhao=2","date":"2024-09-10"}]},{"index":110,"title":"广西电力职业技术学院“五链”融合促进毕业生高质量充分就业","category":"校企（就业）育人案例","date":"2024-09-18","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-09-18&code=007&xuhao=5","date":"2024-09-18"}]},{"index":111,"title":"广西电力职业技术学院人工智能与信息工程学院党总支：以“五融五合”赋能党建引领业务“双融双促”","category":"电亮+（思政）育人案例","date":"2024-11-26","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2024/1126/c390645-41055390.html","date":"2024-11-26"}]},{"index":112,"title":"广西电力职业技术学院人工智能与信息工程学院：以“四大工程”赋能打造“数字工匠”就业服务体系","category":"校企（就业）育人案例","date":"2024-12-03","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2024/1203/c390645-41062858.html","date":"2024-12-03"}]},{"index":113,"title":"“三融三进三平台”广西电力职业技术学院龙狮文化赋能电力工匠","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2024/1203/c390645-41062852.html","date":""}]},{"index":114,"title":"广西电力职院“泰国职业教育标准、资源建设基地（发电运行技术）”海外揭牌","category":"电亮+（思政）育人案例","date":"2024-12-03","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1863927941341093888","date":"2024-12-03"}]},{"index":115,"title":"行企校联创共育能源电力产业导师","category":"校企（就业）育人案例","date":"2024-12-04","sources":[{"site":"新华网","url":"http://gx.news.cn/20241204/8119dc7a0e584b86aef9b5943ce443c0/c.html","date":"2024-12-04"}]},{"index":116,"title":"构建“一核四驱动四提升”组织育人体系，增强学生社会责任意识","category":"电亮+（思政）育人案例","date":"2024-12-10","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2024/1210/c390645-41071190.html","date":"2024-12-10"}]},{"index":117,"title":"广西电力职业技术学院：增强教育教学关键能力赋能广西现代能源体系建设","category":"电亮+（思政）育人案例","date":"2024-12-24","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-12-24&code=007&xuhao=1","date":"2024-12-24"}]},{"index":118,"title":"以文明实践传薪火向雷锋叔叔敬个礼","category":"电亮+（思政）育人案例","date":"2025-03-11","sources":[{"site":"南宁晚报","url":"http://gx.people.com.cn/n2/2025/0311/c179430-41159938.html","date":"2025-03-11"}]},{"index":119,"title":"产教融合广西电力职业技术学院探索AI 人才培育新模式","category":"电亮+（思政）育人案例","date":"2025-03-20","sources":[{"site":"新华网","url":"https://app.xinhuanet.com/news/article.html?articleId=edd0cc8eb77bd1f694c36218497bef6b&timestamp=3154","date":"2025-03-20"}]},{"index":120,"title":"赛教融合育英才职教创新绘蓝图广西电力职业技术学院在第二届全国大学生职业规划大赛获佳绩","category":"职规就业新闻","date":"2025-04-27","sources":[{"site":"中国教育新闻网","url":"http://m.jyb.cn/rmtxwwyyq/jyxx1306/202504/t202504272111337464wap.ht__ml","date":"2025-04-27"}]},{"index":121,"title":"致敬全国劳模｜陈琼：十六年匠心练就电力“最强大脑”","category":"优秀学生（校友）典型","date":"2025-04-29","sources":[{"site":"大象新闻","url":"https://www.163.com/dy/article/JUB1QKQ70550B6IS.html?f=post2020dyreco__mmends","date":"2025-04-29"}]},{"index":122,"title":"同上一门创新实践课”共享优质教育资源","category":"双创新闻","date":"2025-05-13","sources":[{"site":"新华网","url":"http://gx.news.cn/20250513/5f49b8913f43437bb5bcbf924214192a/c.html","date":"2025-05-13"}]},{"index":123,"title":"以“八字诀”激活“一融双高”建设“新引擎”","category":"电亮+（思政）育人案例","date":"2025-05-16","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0516/c179462-41229924.html","date":"2025-05-16"}]},{"index":124,"title":"党建引领产教深融打造育人生态链——广西电力职业技术学院电力","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"中国教育新闻网","url":"http://paper.jyb.cn/zgjyb/html/2025-06/02/content14474918__576132.htm","date":""}]},{"index":125,"title":"破茧智控精耕沃土犁向未来——广西电力职业技术学院农业科技“组合拳”缔造乡村振兴新势能","category":"双创案例","date":"2025-06-04","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0604/c179462-41249759.html","date":"2025-06-04"}]},{"index":126,"title":"电亮青春|闪闪发光吧，校友！","category":"优秀学生（校友）典型","date":"2025-06-04","sources":[{"site":"学校官微","url":"https://mp.weixin.qq.com/s/yQCJQx2jG-lBWEvsHprCpQ","date":"2025-06-04"}]},{"index":127,"title":"电亮青春|闪闪发光吧，校友！（二）","category":"优秀学生（校友）典型","date":"2025-06-22","sources":[{"site":"学校官微","url":"https://mp.weixin.qq.com/s/n44dPzDZ4xhYmBJG8nkgnA","date":"2025-06-22"}]},{"index":128,"title":"构建“6618 电亮+”党建赋能体系凝心聚力推进事业高质量发展","category":"电亮+（思政）育人案例","date":"2025-06-12","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0612/c179462-41257816.html","date":"2025-06-12"}]},{"index":129,"title":"广西职业院校创新创业教育联盟\n2025 年度工作会议举行","category":"双创新闻","date":"2025-06-24","sources":[{"site":"新华网","url":"http://gx.news.cn/20250624/606263b079314a849b8d8a82551b792f/c.html","date":"2025-06-24"}]},{"index":130,"title":"科技“利剑”护航，绘就水环境生态新画卷","category":"双创案例","date":"2025-06-29","sources":[{"site":"中华网","url":"https://tech.china.com/articles/20250629/202506291692512.html","date":"2025-06-29"}]},{"index":131,"title":"跨界·智变广西电力职业技术学院“人工智能+”助力四维产业向新行","category":"双创案例","date":"2025-06-29","sources":[{"site":"中华网","url":"https://tech.china.com/articles/20250629/202506291692511.html","date":"2025-06-29"}]},{"index":132,"title":"科技“利剑”护航，绘就水环境生态新画卷","category":"双创案例","date":"2025-06-29","sources":[{"site":"凤凰网","url":"https://tech.ifeng.com/c/8ka2hUKDV2w","date":"2025-06-29"}]},{"index":133,"title":"跨界·智变广西电力职业技术学院“人工智能+”助力四维产业向新行","category":"双创案例","date":"2025-06-29","sources":[{"site":"凤凰网","url":"https://tech.ifeng.com/c/8ka3DwrvKN9","date":"2025-06-29"}]},{"index":134,"title":"广西电力职业技术学院“人工智能\n+”助力四维产业向新行","category":"双创案例","date":"2025-06-30","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2025/0630/c179462-41276382.html","date":"2025-06-30"}]},{"index":135,"title":"广西电力职业技术学院助力绿色基建发展生态","category":"双创案例","date":"","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2025/0707/c179462-41283280.html","date":""}]},{"index":136,"title":"校企共筑人才“蓄水池”凝聚发展“源动力”","category":"校企（就业）育人案例","date":"2025-07-07","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0707/c179462-41283304.html","date":"2025-07-07"}]},{"index":137,"title":"逐梦深蓝探脉未来广西电力职业技术学院探索跨界创新","category":"双创案例","date":"2025-07-08","sources":[{"site":"新华网","url":"http://gx.news.cn/20250708/7321d5f5b7764dfa9ee3aca5d8835e03/c.html","date":"2025-07-08"}]},{"index":138,"title":"广西电力职业技术学院人工智能与信息工程学院“乡村振兴”科技服务实践团","category":"电亮+（思政）育人案例","date":"2025-07-21","sources":[{"site":"八桂之窗","url":"https://mp.weixin.qq.com/s/n2PZsetDuFPw9vfq67y__g","date":"2025-07-21"}]},{"index":139,"title":"青春“电亮”靖西边关科技研学赋能未来","category":"电亮+（思政）育人案例","date":"2025-07-25","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0725/c179462-41302584.html","date":"2025-07-25"}]},{"index":140,"title":"“电小潮”中华文化传承团赴靖西开展多彩“三下乡”活动","category":"电亮+（思政）育人案例","date":"2025-07-26","sources":[{"site":"新华网","url":"http://gx.news.cn/20250726/23bb7aa2620d411aa319d56dec5f397f/c.html","date":"2025-07-26"}]},{"index":141,"title":"创新种子生根记：广西电力学子王俊杰的逐梦征程","category":"优秀学生（校友）典型","date":"2025-08-05","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0805/c179409-41313375.html","date":"2025-08-05"}]},{"index":142,"title":"微视：匠心筑山水，非遗载思政","category":"电亮+（思政）育人案例","date":"2025-08-06","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2025/0805/c179409-41313021.html","date":"2025-08-06"}]},{"index":143,"title":"构建“12345”党建工作机制以高质量党建赋能学院高质量发展","category":"电亮+（思政）育人案例","date":"2025-08-14","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2025/0814/c179462-41322151.html","date":"2025-08-14"}]},{"index":144,"title":"跨越山海的成长--张小晶用三年把中国变成“第二故乡”","category":"优秀学生（校友）典型","date":"2025-09-07","sources":[{"site":"中国报道","url":"http://new.chinareports.org.cn/index/news/50196.html","date":"2025-09-07"}]},{"index":145,"title":"广西电力职业技术学院与中国广核集团成员公司校企合作项目顺利启动","category":"双创案例","date":"2025-09-09","sources":[{"site":"人民网","url":"http://gx.people.com.cn/n2/2025/0909/c179462-41346420.html","date":"2025-09-09"}]},{"index":146,"title":"青年说理丨困难再大，想想红军长征，想想湘江血战","category":"电亮+（思政）育人案例","date":"","sources":[{"site":"广西日报","url":"https://mp.weixin.qq.com/s?biz=MjM5MTM1MDExMw==&mid=2651989770&idx=1&sn=33cff57d09b978ef8430626eab79e8a5&chksm=bc6f412914638f28af31da391eee3a013784fcce83b7398d2a7b664d8a4eac2dfc73e5f5c730&mpshare=1&scene=23&srcid=0909Vsp4lIuAPRn6R9KTmPBV&sharershareinf","date":""}]},{"index":147,"title":"广西电力职业技术学院启动与中国广核集团成员公司校企合作项目","category":"双创案例","date":"2025-09-10","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1965604626355060736","date":"2025-09-10"}]},{"index":148,"title":"桂越高校携手共育能源电力人才广西电力职业技术学院与越南电力大学签署合作备忘录","category":"双创案例","date":"2025-09-18","sources":[{"site":"中国报道","url":"http://new.chinareports.org.cn/index/news/51113.html","date":"2025-09-18"}]},{"index":149,"title":"（原表未列标题，详见原文）","category":"双创案例","date":"2025-09-19","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/0919/c179462-41357100.html","date":"2025-09-19"}]},{"index":150,"title":"“电亮”网络之光：“四链融合”构建高职网络育人新生态","category":"电亮+（思政）育人案例","date":"2025-09-19","sources":[{"site":"中国教育网络电视台","url":"http://tzpy.1xxmt.com/article/3357","date":"2025-09-19"}]},{"index":151,"title":"环江驻村书记救助遇险老人","category":"电亮+（思政）育人案例","date":"2025-10-14","sources":[{"site":"广西云-广西画报","url":"https://apph5.cloudgx.cn/article/sync1978016069049991168","date":"2025-10-14"}]},{"index":152,"title":"龙虎舞动桂豫情交流融合共发展","category":"双创案例","date":"2025-10-24","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1981589528661590016","date":"2025-10-24"}]},{"index":153,"title":"“中广核新能源杯”第二届大学生风力发电职业技能竞赛决赛开幕","category":"双创案例","date":"2025-10-29","sources":[{"site":"中国报道","url":"http://new.chinareports.org.cn/index/news/56201.html","date":"2025-10-29"}]},{"index":154,"title":"（原表未列标题，详见原文）","category":"其他","date":"","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/1030/c179462-41396465.html","date":""}]},{"index":156,"title":"广西“学生军”征战全运会，南狮项目实现历史性突破","category":"双创案例","date":"2025-11-13","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1988991090286329856","date":"2025-11-13"}]},{"index":157,"title":"（原表未列标题，详见原文）","category":"其他","date":"2025-11-13","sources":[{"site":"广西新闻网","url":"https://www.gxnews.com.cn/staticpages/20251113/newgx6915f7e9-21869505.shtml","date":"2025-11-13"}]},{"index":158,"title":"为桂争光！广西电力职院龙狮队首战全运会实现广西南狮项目的历史性突破","category":"双创案例","date":"2025-11-14","sources":[{"site":"中国报道","url":"http://new.chinareports.org.cn/index/news/59877.html","date":"2025-11-14"}]},{"index":159,"title":"厉害了！这所学校的龙狮队代表广西首战全运会实现广西南狮项目的历史性突破","category":"双创案例","date":"2025-11-14","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1989247027836289024","date":"2025-11-14"}]},{"index":160,"title":"打造“1+5+N“智慧党建云平台以智慧云网赋能党建工作提质增效","category":"电亮+（思政）育人案例","date":"2025-12-05","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/1205/c179462-41433735.html","date":"2025-12-05"}]},{"index":161,"title":"“龙狮少年”的追光之路","category":"优秀学生（校友）典型","date":"2025-12-05","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync1996876878352822272","date":"2025-12-05"}]},{"index":162,"title":"（原表未列标题，详见原文）","category":"优秀学生（校友）典型","date":"2025-12-07","sources":[{"site":"广西日报","url":"https://gxrb.gxrb.com.cn/?name=gxrb&date=2025-12-07&code=009&xuhao=1","date":"2025-12-07"}]},{"index":163,"title":"专家齐聚南宁共探新能源新材料职教发展","category":"双创案例","date":"2025-12-22","sources":[{"site":"广西日报-广西云客户端","url":"https://apph5.cloudgx.cn/article/sync2002911286531911680","date":"2025-12-22"}]},{"index":164,"title":"茶香润心文化铸魂——广西电力职院“敏行”工作室构建特色育人新范式","category":"双创案例","date":"2025-12-22","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2025/1222/c179462-41450127.html","date":"2025-12-22"}]},{"index":165,"title":"联盟搭台“云端共学“校际共享优质双创课程资源","category":"双创案例","date":"2026-01-29","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0129/c179462-41486827.html","date":"2026-01-29"}]},{"index":166,"title":"广西电力职业技术学院国际学生斩获第二届职业教育宝石王杯大赛冠军","category":"优秀学生（校友）典型","date":"2026-03-05","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0305/c179462-41516051.html","date":"2026-03-05"}]},{"index":167,"title":"广西电力职院：将新时代电力发展伟大成就融入电力工匠培养","category":"双创案例","date":"2026-03-10","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0310/c179462-41519748.html","date":"2026-03-10"}]},{"index":168,"title":"广西电力职业技术学院首届海尔国际工匠订单班启动","category":"双创案例","date":"2026-03-12","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0312/c179462-41521692.html","date":"2026-03-12"}]},{"index":169,"title":"广西电力职业技术学院联合海尔智家股份有限公司启动中国—泰国绿色电力现代工匠学院首届海尔国际工匠订单班","category":"双创案例","date":"2026-03-12","sources":[{"site":"中国报道","url":"http://new.chinareports.org.cn/index/news/83078.html","date":"2026-03-12"}]},{"index":170,"title":"中国—泰国绿色电力现代工匠学院首届海尔国际工匠订单班开班","category":"双创案例","date":"2026-03-14","sources":[{"site":"新华网","url":"http://gx.news.cn/20260314/78506a979094493fad479f86718fa719/c.html","date":"2026-03-14"}]},{"index":171,"title":"2026 年广西职业院校技能大赛创新创业赛道在南宁举行","category":"双创新闻","date":"2026-03-16","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0316/c179462-41524636.html","date":"2026-03-16"}]},{"index":172,"title":"2026 年广西职业院校技能大赛高职组新闻传播赛道竞赛举办","category":"双创新闻","date":"2026-03-18","sources":[{"site":"新华网","url":"http://gx.news.cn/20260318/ad852dd4b55d4b7db10d4c456c51dda2/c.html","date":"2026-03-18"}]},{"index":173,"title":"广西电力职业技术学院以“技教融合”赋能乡村振兴让清泉流淌在石山深处","category":"双创案例","date":"2026-04-03","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0403/c179462-41543344.html","date":"2026-04-03"}]},{"index":174,"title":"校地同心促振兴“以购代捐”让环江山货香飘校园","category":"双创案例","date":"2026-04-30","sources":[{"site":"广西云-广西画报","url":"https://web.cloudgx.cn/news?id=1222385","date":"2026-04-30"}]},{"index":175,"title":"广西电力职院国际学生获2026“汉语桥”华南预选赛风采奖","category":"优秀学生（校友）典型","date":"2026-05-03","sources":[{"site":"中国报道","url":"http://www.chinareports.org.cn/index/news/93662.html","date":"2026-05-03"}]},{"index":176,"title":"广西电力职业技术学院举办红色文化校园行活动","category":"双创新闻","date":"2026-05-03","sources":[{"site":"新华网","url":"http://gx.news.cn/20260503/bfa8fa8bac80423fbd0ba0dc1e13010b/c.html","date":"2026-05-03"}]},{"index":177,"title":"广西电力职业技术学院联合海尔智家股份有限公司在泰揭牌中国—泰国绿色电力现代工匠学院","category":"双创新闻","date":"2026-06-16","sources":[{"site":"中国报道","url":"http://www.chinareports.org.cn/index/news/102981.html","date":"2026-06-16"}]},{"index":178,"title":"中国—泰国绿色电力现代工匠学院揭牌","category":"双创新闻","date":"2026-06-17","sources":[{"site":"新华网","url":"http://www.gx.xinhuanet.com/20260617/ea7b698079ba460fa0f30fed64d1bb85/c.html","date":"2026-06-17"}]},{"index":179,"title":"广西电力职业技术学院代表团访问越南电力大学","category":"双创新闻","date":"2026-06-18","sources":[{"site":"中国报道","url":"http://www.chinareports.org.cn/index/news/103771.html","date":"2026-06-18"}]},{"index":180,"title":"广西电力职业技术学院深耕东盟国际化办学","category":"双创新闻","date":"2026-06-18","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0618/c179462-41615188.html","date":"2026-06-18"}]},{"index":181,"title":"广西电力职院构建“五心”护航育人新格局","category":"双创新闻","date":"2026-06-18","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0618/c179462-41614545.html","date":"2026-06-18"}]},{"index":182,"title":"跨校交流携手共育“引路人”","category":"双创案例","date":"2026-06-18","sources":[{"site":"人民网－广西频道","url":"http://gx.people.com.cn/n2/2026/0618/c179462-41615029.html","date":"2026-06-18"}]}];
+</script>
+<script type="text/javascript">
+(function () {
+    var listNode = document.getElementById('media-list');
+    var pagerNode = document.getElementById('media-pager');
+    var countNode = document.getElementById('media-count');
+    var emptyNode = document.getElementById('media-empty');
+    var searchInput = document.getElementById('media-search');
+
+    var pageSize = 15;
+    var currentPage = 1;
+    var keyword = '';
+
+    function buildItem(item) {
+        var li = document.createElement('li');
+        var dot = document.createElement('span');
+        dot.className = 'dot';
+        li.appendChild(dot);
+
+        var body = document.createElement('div');
+        body.className = 'title';
+
+        var link = document.createElement('a');
+        link.className = 'title';
+        link.href = item.sources[0].url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = item.title;
+        body.appendChild(link);
+
+        if (item.category) {
+            var tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.textContent = item.category;
+            body.appendChild(tag);
+        }
+
+        if (item.sources.length > 1) {
+            var more = document.createElement('details');
+            more.className = 'media-more';
+            var summary = document.createElement('summary');
+            summary.textContent = '另有 ' + (item.sources.length - 1) + ' 家媒体报道';
+            more.appendChild(summary);
+            item.sources.slice(1).forEach(function (source) {
+                var extra = document.createElement('a');
+                extra.className = 'more-link';
+                extra.href = source.url;
+                extra.target = '_blank';
+                extra.rel = 'noopener noreferrer';
+                extra.textContent = (source.site || '查看原文') + (source.date ? '（' + source.date + '）' : '');
+                more.appendChild(extra);
+            });
+            body.appendChild(more);
+        }
+
+        li.appendChild(body);
+
+        var meta = document.createElement('div');
+        meta.className = 'meta';
+        var site = document.createElement('span');
+        site.className = 'site';
+        site.textContent = item.sources[0].site || '';
+        meta.appendChild(site);
+        meta.appendChild(document.createTextNode(item.date || ''));
+        li.appendChild(meta);
+        return li;
+    }
+
+    function render() {
+        var text = keyword.trim().toLowerCase();
+        var filtered = window.MEDIA_DATA.filter(function (item) {
+            if (!text) {
+                return true;
+            }
+            var haystack = (item.title + ' ' + item.category + ' ' + item.date + ' ' +
+                item.sources.map(function (source) { return source.site; }).join(' ')).toLowerCase();
+            return haystack.indexOf(text) !== -1;
+        });
+
+        var totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+        if (currentPage > totalPages) {
+            currentPage = totalPages;
+        }
+        var start = (currentPage - 1) * pageSize;
+        var pageItems = filtered.slice(start, start + pageSize);
+
+        listNode.innerHTML = '';
+        pageItems.forEach(function (item) {
+            listNode.appendChild(buildItem(item));
+        });
+        emptyNode.style.display = filtered.length ? 'none' : 'block';
+        countNode.textContent = '共 ' + filtered.length + ' 条报道（第 ' + currentPage + ' / ' + totalPages + ' 页）';
+
+        pagerNode.innerHTML = '';
+        if (totalPages <= 1) {
+            return;
+        }
+        function addButton(label, page, active, disabled) {
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = label;
+            if (active) {
+                button.className = 'active';
+            }
+            button.disabled = !!disabled;
+            button.addEventListener('click', function () {
+                currentPage = page;
+                render();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            pagerNode.appendChild(button);
+        }
+        addButton('上一页', currentPage - 1, false, currentPage === 1);
+        for (var page = 1; page <= totalPages; page += 1) {
+            addButton(String(page), page, page === currentPage, false);
+        }
+        addButton('下一页', currentPage + 1, false, currentPage === totalPages);
+    }
+
+    searchInput.addEventListener('input', function () {
+        keyword = searchInput.value;
+        currentPage = 1;
+        render();
+    });
+
+    render();
+})();
+</script>
 </body>
 </html>
