@@ -20,7 +20,7 @@ OUT = ROOT / "student-award.html"
 
 AWARD_CLASS = {"金奖": "aw-gold", "银奖": "aw-silver", "铜奖": "aw-bronze"}
 
-# 置顶顺序：廖奎源的两项证书排在前面（职业规划大赛国金 → 大创赛国银），其余按含金量排
+# 置顶顺序：廖奎源的两项证书排最前（职规赛国金 → 大创赛国银），其余按含金量排
 PINNED = [
     "第三届全国大学生职业规划大赛 全国金奖",
     "中国国际大学生创新大赛（2025）全国银奖",
@@ -158,6 +158,37 @@ SCRIPT = """
         window.location.href = 'index.html';
     });
     window.addEventListener('pagehide', function () { window.__stuLeft = true; });
+
+    // 点证书整屏放大：图片按原比例完整显示，不裁剪
+    var viewer = document.getElementById('cert-viewer');
+    var viewerImg = document.getElementById('cert-viewer-img');
+    var viewerTitle = document.getElementById('cert-viewer-title');
+
+    function closeViewer() {
+        viewer.classList.remove('open');
+        viewerImg.removeAttribute('src');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelector('.stu-scroll').addEventListener('click', function (event) {
+        var box = event.target.closest('.cert-zoomable');
+        if (!box) return;
+        var img = box.querySelector('img');
+        if (!img) return;
+        viewerImg.src = img.getAttribute('src');
+        viewerImg.alt = img.getAttribute('alt') || '';
+        viewerTitle.textContent = img.getAttribute('alt') || '';
+        viewer.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+
+    document.getElementById('cert-viewer-back').addEventListener('click', closeViewer);
+    viewer.addEventListener('click', function (event) {
+        if (event.target === viewer) closeViewer();
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && viewer.classList.contains('open')) closeViewer();
+    });
 })();
 """
 
@@ -178,7 +209,7 @@ def build_page(items):
             '                        <div class="stu-line1">%s<span class="aw %s">%s</span></div>\n'
             '                        <div class="stu-desc">%s</div>\n'
             '                    </div>\n'
-            '                    <div class="stu-img"><img src="%s" alt="%s" loading="lazy"></div>\n'
+            '                    <div class="stu-img cert-zoomable"><img src="%s" alt="%s" loading="lazy"></div>\n'
             '                </div>' % (
                 html.escape(item["奖项"]),
                 award_class,
@@ -256,6 +287,13 @@ def build_page(items):
         </div>
     </div>
     <div class="foot">版权所有：广西电力职业技术学院&emsp;&emsp;|&emsp;&emsp;网站备案号：桂ICP备08001145号-1&emsp;&emsp;|&emsp;&emsp;桂公网安备:45010702000119号&emsp;&emsp;|&emsp;&emsp;地址：广西南宁市玉洞大道109号&emsp;&emsp;|&emsp;&emsp;邮编：530007&emsp;&emsp;|&emsp;&emsp;联系电话：0771-2212798    </div>
+</div>
+<div class="cert-viewer" id="cert-viewer">
+    <div class="cert-viewer-bar">
+        <button type="button" class="cert-viewer-back" id="cert-viewer-back">← 返回</button>
+        <span class="cert-viewer-title" id="cert-viewer-title"></span>
+    </div>
+    <div class="cert-viewer-body"><img id="cert-viewer-img" src="" alt=""></div>
 </div>
 <script type="text/javascript">
 %(script)s

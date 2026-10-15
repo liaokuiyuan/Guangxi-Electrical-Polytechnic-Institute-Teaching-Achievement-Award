@@ -182,7 +182,7 @@ def build_page(items):
             '                            <div class="award-time">%s</div>\n'
             '                            <div class="award-desc">%s</div>\n'
             '                        </div>\n'
-            '                        <div class="award-img"><img src="%s" alt="%s" loading="lazy"></div>\n'
+            '                        <div class="award-img cert-zoomable"><img src="%s" alt="%s" loading="lazy"></div>\n'
             '                    </div>' % (
                 html.escape(item["奖项"]),
                 level_class,
@@ -208,6 +208,7 @@ def build_page(items):
     <link type="text/css" rel="stylesheet" href="./css/layui.css"/>
     <link type="text/css" rel="stylesheet" href="./css/common.css"/>
     <link type="text/css" rel="stylesheet" href="./css/cghj.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/page-nav.css"/>
     <style>%(style)s</style>
     <script type="text/javascript" src="./js/layui.js"></script>
     <script type="text/javascript" src="./js/init.js"></script>
@@ -267,6 +268,47 @@ def build_page(items):
     </div>
     <div class="foot">版权所有：广西电力职业技术学院&emsp;&emsp;|&emsp;&emsp;网站备案号：桂ICP备08001145号-1&emsp;&emsp;|&emsp;&emsp;桂公网安备:45010702000119号&emsp;&emsp;|&emsp;&emsp;地址：广西南宁市玉洞大道109号&emsp;&emsp;|&emsp;&emsp;邮编：530007&emsp;&emsp;|&emsp;&emsp;联系电话：0771-2212798    </div>
 </div>
+<div class="cert-viewer" id="cert-viewer">
+    <div class="cert-viewer-bar">
+        <button type="button" class="cert-viewer-back" id="cert-viewer-back">← 返回</button>
+        <span class="cert-viewer-title" id="cert-viewer-title"></span>
+    </div>
+    <div class="cert-viewer-body"><img id="cert-viewer-img" src="" alt=""></div>
+</div>
+<script type="text/javascript">
+(function () {
+    // 点证书整屏放大：按原比例完整显示，不裁剪
+    var viewer = document.getElementById('cert-viewer');
+    var viewerImg = document.getElementById('cert-viewer-img');
+    var viewerTitle = document.getElementById('cert-viewer-title');
+
+    function closeViewer() {
+        viewer.classList.remove('open');
+        viewerImg.removeAttribute('src');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelector('.award-scroll').addEventListener('click', function (event) {
+        var box = event.target.closest('.cert-zoomable');
+        if (!box) return;
+        var img = box.querySelector('img');
+        if (!img) return;
+        viewerImg.src = img.getAttribute('src');
+        viewerImg.alt = img.getAttribute('alt') || '';
+        viewerTitle.textContent = img.getAttribute('alt') || '';
+        viewer.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+
+    document.getElementById('cert-viewer-back').addEventListener('click', closeViewer);
+    viewer.addEventListener('click', function (event) {
+        if (event.target === viewer) closeViewer();
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && viewer.classList.contains('open')) closeViewer();
+    });
+})();
+</script>
 </body>
 </html>
 """ % {

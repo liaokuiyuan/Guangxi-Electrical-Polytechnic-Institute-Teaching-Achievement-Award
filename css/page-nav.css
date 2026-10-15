@@ -44,3 +44,107 @@
         font-size: 16px;
     }
 }
+
+/* ========================================
+   证书放大查看
+
+   页面里的证书一律完整显示、不做裁剪；点一下可以在整屏里放大看细节。
+   图片用 max-width/max-height:100% + object-fit:contain，
+   无论横版还是竖版证书都完整呈现，不会被切掉。
+   ======================================== */
+.cert-zoomable {
+    cursor: zoom-in;
+}
+
+.cert-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    background: rgba(12, 22, 38, 0.92);
+}
+
+.cert-viewer.open {
+    display: flex;
+}
+
+.cert-viewer-bar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1rem;
+    background: #014D98;
+    color: #FFFFFF;
+}
+
+.cert-viewer-bar .cert-viewer-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 2.4rem;
+    padding: 0 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cert-viewer-bar .cert-viewer-back:hover {
+    background: #FFFFFF;
+    color: #014D98;
+}
+
+.cert-viewer-bar .cert-viewer-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #EAF1FA;
+    font-size: 16px;
+}
+
+.cert-viewer-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cert-viewer-body img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: #FFFFFF;
+    border-radius: 0.4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cert-viewer-bar {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .cert-viewer-bar .cert-viewer-back {
+        flex: 1 1 100%;
+        justify-content: center;
+        height: 2.8rem;
+        font-size: 17px;
+    }
+
+    .cert-viewer-body {
+        padding: 0.5rem;
+    }
+}
+
