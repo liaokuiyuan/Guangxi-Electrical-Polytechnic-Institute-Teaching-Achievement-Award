@@ -18,41 +18,7 @@ OUT = ROOT / "share.html"
 PAGE_SIZE = 12
 
 STYLE = """
-.share-toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
-}
-
-.share-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    height: 2.5rem;
-    padding: 0 1.1rem;
-    border: 1px solid #005699;
-    border-radius: 1.25rem;
-    background: #FFFFFF;
-    color: #014D98;
-    font-size: 17px;
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.share-back:hover {
-    background: #014D98;
-    color: #FFFFFF;
-    border-color: #014D98;
-}
-
-.share-count {
-    color: #7A8798;
-    font-size: 15px;
-}
-
+/* 返回按钮与工具条样式统一放在 css/page-nav.css，学生获奖等详情页共用 */
 .share-card {
     display: flex;
     flex-direction: column;

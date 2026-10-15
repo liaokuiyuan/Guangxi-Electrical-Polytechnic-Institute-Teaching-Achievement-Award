@@ -9,62 +9,110 @@
     <link type="text/css" rel="stylesheet" href="./css/layui.css"/>
     <link type="text/css" rel="stylesheet" href="./css/common.css"/>
     <link type="text/css" rel="stylesheet" href="./css/cghj.css"/>
-    <style>
-        /* 学生获奖图片墙 */
-        .award-card {
-            background-color: #FFFFFF;
-            box-shadow: 0 0.27rem 0.67rem 0 rgba(0, 0, 0, 0.1);
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-        }
-        .award-note {
-            font-size: 1.05rem;
-            line-height: 2rem;
-            color: #555;
-            margin-bottom: 1.2rem;
-        }
-        .award-more {
-            text-align: right;
-            margin-bottom: 1rem;
-        }
-        .award-more a { color: #005699; font-size: 1.05rem; }
-        .award-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-        }
-        .award-gallery .g-item {
-            background: #FFFFFF;
-            border: 1px solid #E3EAF3;
-            border-radius: 0.8rem;
-            padding: 0.5rem;
-            cursor: zoom-in;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .award-gallery .g-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.15);
-        }
-        .award-gallery .g-item img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 32rem;
-            object-fit: contain;
-            border-radius: 0.5rem;
-        }
-        @media screen and (max-width: 992px) {
-            .award-gallery { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media screen and (max-width: 768px) {
-            .award-card { padding: 1rem; border-radius: 1rem; }
-            .award-gallery { grid-template-columns: 1fr; gap: 0.8rem; }
-            .award-gallery .g-item img { max-height: none; }
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="./css/page-nav.css"/>
+    <style>.stu-card {
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+}
+
+.stu-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.5rem;
+}
+
+.stu-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.stu-scroll::-webkit-scrollbar-thumb {
+    background: #C8D2DE;
+    border-radius: 0.2rem;
+}
+
+.stu-scroll::-webkit-scrollbar-thumb:hover {
+    background: #014D98;
+}
+
+.stu-item {
+    padding: 1.1rem 0.4rem 1.5rem;
+    border-bottom: 0.06rem dashed #E3E8EF;
+}
+
+.stu-item:last-child {
+    border-bottom: 0;
+}
+
+/* 文字在上、图片在下 */
+.stu-item .stu-text {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+.stu-item .stu-line1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    color: #014D98;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.stu-item .stu-line1 .aw {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.stu-item .stu-line1 .aw-gold { background: #C0392B; }
+.stu-item .stu-line1 .aw-silver { background: #5B6F9E; }
+.stu-item .stu-line1 .aw-bronze { background: #B07A46; }
+
+.stu-item .stu-desc {
+    margin-top: 0.35rem;
+    color: #22334A;
+    font-size: 17px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.stu-item .stu-img {
+    display: block;
+    width: 100%;
+    max-width: 46rem;
+    margin: 0.9rem auto 0;
+    border: 1px solid #E3E8EF;
+    border-radius: 0.5rem;
+    background: #FAFBFD;
+    overflow: hidden;
+}
+
+.stu-item .stu-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .stu-card {
+        height: 40rem;
+    }
+
+    .stu-item .stu-line1 {
+        font-size: 18px;
+    }
+
+    .stu-item .stu-desc {
+        font-size: 16px;
+    }
+}</style>
     <script type="text/javascript" src="./js/layui.js"></script>
     <script type="text/javascript" src="./js/init.js"></script>
 </head>
@@ -103,38 +151,97 @@
                 <div class="main-list-title-1">学生获奖</div>
                 <div class="main-list-title-2">您的位置：首页 | 学生获奖</div>
             </div>
-            <div class="award-card">
-                <div class="award-more"><a href="award.html">查看成果获奖材料 &gt;&gt;</a></div>
-                <div class="award-note">
-                    学生在创新创业类竞赛及职业规划类赛事中取得的部分奖项与现场照片（含中国国际大学生创新大赛国赛银奖、广西赛区金奖、全国大学生职业规划大赛国赛金奖等）。点击图片可放大查看。
+            <div class="main3-body">
+                <div class="main3-body-right stu-card">
+                    <div class="main3-body-right-title">学生竞赛获奖</div>
+                    <div class="share-toolbar">
+                        <button type="button" class="share-back" id="stu-back">← 返回上一页</button>
+                        <span class="share-count">金奖 2 项 · 银奖 4 项 · 铜奖 2 项</span>
+                    </div>
+                    <div class="stu-scroll">
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第三届全国大学生职业规划大赛 全国金奖<span class="aw aw-gold">金奖</span></div>
+                        <div class="stu-desc">2026 年 1 月在第三届全国大学生职业规划大赛全国总决赛中荣获金奖（学生 廖奎源），教育部、天津市人民政府主办。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/廖奎源职规国金通知.png" alt="第三届全国大学生职业规划大赛 全国金奖" loading="lazy"></div>
                 </div>
-                <div class="award-gallery" id="student-gallery">
-                    <div class="g-item"><img src="new%20images/学生获奖1.jpg" alt="全国大学生职业规划大赛国赛金奖通知"></div>
-                    <div class="g-item"><img src="new%20images/大创赛国银证书.jpg" alt="中国国际大学生创新大赛国赛银奖证书"></div>
-                    <div class="g-item"><img src="new%20images/学生获奖3.png" alt="学生双创竞赛获奖证书"></div>
-                    <div class="g-item"><img src="new%20images/学生获奖4.png" alt="学生双创竞赛获奖证书"></div>
-                    <div class="g-item"><img src="new%20images/职规赛合照.jpg" alt="职业规划大赛参赛合影"></div>
-                    <div class="g-item"><img src="new%20images/大创赛合照.jpg" alt="创新创业大赛参赛团队合影"></div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">中国国际大学生创新大赛（2025）全国银奖<span class="aw aw-silver">银奖</span></div>
+                        <div class="stu-desc">2025 年在中国国际大学生创新大赛全国总决赛中荣获银奖，参赛项目《源启星链—AI 驱动能源矩阵式智能充电生态系统》。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/大创赛国银证书.jpg" alt="中国国际大学生创新大赛（2025）全国银奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第十四届“挑战杯”秦创原中国大学生创业计划竞赛 全国银奖<span class="aw aw-silver">银奖</span></div>
+                        <div class="stu-desc">2024 年在第十四届“挑战杯”秦创原中国大学生创业计划竞赛主体赛全国总决赛中荣获银奖，参赛项目《逃出生天——汽车落水及着火智能逃生装置开拓者》。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/挑战杯创业计划竞赛-全国银奖-逃出生天.png" alt="第十四届“挑战杯”秦创原中国大学生创业计划竞赛 全国银奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第二届全国大学生职业规划大赛 全国银奖<span class="aw aw-silver">银奖</span></div>
+                        <div class="stu-desc">2025 年在第二届全国大学生职业规划大赛全国总决赛中荣获银奖（成长赛道）。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/全国大学生职业规划大赛-全国银奖-欧阳丝钰.png" alt="第二届全国大学生职业规划大赛 全国银奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第二届全国大学生职业规划大赛 全国铜奖<span class="aw aw-bronze">铜奖</span></div>
+                        <div class="stu-desc">2025 年在第二届全国大学生职业规划大赛全国总决赛中荣获铜奖（就业赛道）。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/全国大学生职业规划大赛-全国铜奖-孟文轩.png" alt="第二届全国大学生职业规划大赛 全国铜奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第七届中国国际“互联网+”大学生创新创业大赛 全国金奖<span class="aw aw-gold">金奖</span></div>
+                        <div class="stu-desc">2021 年在第七届中国国际“互联网+”大学生创新创业大赛全国总决赛中荣获金奖，参赛作品《白色森林儿童美术》。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/中国国际互联网%2B大赛-全国金奖-白色森林儿童美术.png" alt="第七届中国国际“互联网+”大学生创新创业大赛 全国金奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第七届中国国际“互联网+”大学生创新创业大赛 全国银奖<span class="aw aw-silver">银奖</span></div>
+                        <div class="stu-desc">2021 年在第七届中国国际“互联网+”大学生创新创业大赛全国总决赛中荣获银奖，参赛作品《跃晟香蕉——香蕉科技产业振兴者》。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/中国国际互联网%2B大赛-全国银奖-跃晟香蕉.png" alt="第七届中国国际“互联网+”大学生创新创业大赛 全国银奖" loading="lazy"></div>
+                </div>
+                <div class="stu-item">
+                    <div class="stu-text">
+                        <div class="stu-line1">第七届中国国际“互联网+”大学生创新创业大赛 全国铜奖<span class="aw aw-bronze">铜奖</span></div>
+                        <div class="stu-desc">2021 年在第七届中国国际“互联网+”大学生创新创业大赛全国总决赛中荣获铜奖，参赛作品《蚕燃一新——智能蚕茧烤房》。</div>
+                    </div>
+                    <div class="stu-img"><img src="new%20images/学生获奖/中国国际互联网%2B大赛-全国铜奖-蚕燃一新智能蚕茧烤房.png" alt="第七届中国国际“互联网+”大学生创新创业大赛 全国铜奖" loading="lazy"></div>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="foot">版权所有：广西电力职业技术学院&emsp;&emsp;|&emsp;&emsp;网站备案号：桂ICP备08001145号-1&emsp;&emsp;|&emsp;&emsp;桂公网安备:45010702000119号&emsp;&emsp;|&emsp;&emsp;地址：广西南宁市玉洞大道109号&emsp;&emsp;|&emsp;&emsp;邮编：530007&emsp;&emsp;|&emsp;&emsp;联系电话：0771-2212798    </div>
 </div>
-<script>
-    layui.use(function () {
-        var layer = layui.layer;
-        document.getElementById('student-gallery').addEventListener('click', function (e) {
-            var img = e.target.closest('.g-item') ? e.target.closest('.g-item').querySelector('img') : null;
-            if (!img) return;
-            layer.open({
-                type: 1,
-                title: img.getAttribute('alt') || '学生获奖材料',
-                content: "<div style='text-align:center;padding:0.5rem;'><img src='" + img.getAttribute('src') + "' style='max-width:100%;max-height:80vh;'></div>",
-                area: ["90%", "90%"]
-            });
-        });
+<script type="text/javascript">
+(function () {
+    // 返回上一页：从站内别的页面进来的回上一页，直接打开的回首页；
+    // 回退没生效时兜底跳首页，避免点了没反应。
+    document.getElementById('stu-back').addEventListener('click', function () {
+        var referrer = document.referrer || '';
+        var sameSite = referrer.indexOf(window.location.origin + '/') === 0;
+        var referrerPage = sameSite ? referrer.split('/').pop() : '';
+        var fromOtherPage = sameSite && referrerPage && referrerPage !== 'student-award.html';
+        if (fromOtherPage && window.history.length > 1) {
+            window.history.back();
+            setTimeout(function () {
+                if (!window.__stuLeft) window.location.href = 'index.html';
+            }, 600);
+            return;
+        }
+        window.location.href = 'index.html';
     });
+    window.addEventListener('pagehide', function () { window.__stuLeft = true; });
+})();
 </script>
 </body>
 </html>

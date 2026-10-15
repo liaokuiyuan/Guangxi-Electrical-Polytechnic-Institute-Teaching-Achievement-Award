@@ -174,22 +174,23 @@ def build_page(items):
     for item in items:
         level = item.get("级别", "")
         level_class = LEVEL_CLASS.get(level, "lv-province")
+        # 文字在上、证书在下
         blocks.append(
             '                    <div class="award-item">\n'
-            '                        <div class="award-img"><img src="%s" alt="%s" loading="lazy"></div>\n'
             '                        <div class="award-body">\n'
             '                            <div class="award-name">%s<span class="level %s">%s</span></div>\n'
             '                            <div class="award-time">%s</div>\n'
             '                            <div class="award-desc">%s</div>\n'
             '                        </div>\n'
+            '                        <div class="award-img"><img src="%s" alt="%s" loading="lazy"></div>\n'
             '                    </div>' % (
-                html.escape(item["图"], quote=True),
-                html.escape(item["奖项"], quote=True),
                 html.escape(item["奖项"]),
                 level_class,
                 html.escape(level),
                 html.escape(item.get("时间", "")),
                 html.escape(item.get("说明", "")),
+                html.escape(item["图"], quote=True),
+                html.escape(item["奖项"], quote=True),
             )
         )
     cards = "\n".join(blocks)

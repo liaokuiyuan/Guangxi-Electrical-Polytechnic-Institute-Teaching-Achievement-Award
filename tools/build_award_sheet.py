@@ -1,7 +1,8 @@
 """把导出的成果获奖证书图拼成一张总览页，便于挑选。
 
-用法：python tools/build_award_sheet.py <证书图目录> <输出目录>
+用法：python tools/build_award_sheet.py <证书图目录> [输出目录] [文件名前缀]
 产物：<输出目录>/sheet.html
+前缀用于区分不同批次（如 stu_ 表示学生竞赛证书）。
 """
 
 import html
@@ -10,15 +11,16 @@ import sys
 
 
 def sort_key(name):
-    page, index = name[1:].split("_")
-    return int(page), int(index.split(".")[0])
+    page, index = name.lstrip("stued_").split("_")[:2]
+    return int(page.lstrip("p")), int(index.split(".")[0])
 
 
 def main():
     source = pathlib.Path(sys.argv[1])
     out_dir = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else source
+    prefix = sys.argv[3] if len(sys.argv) > 3 else "p"
     out_dir.mkdir(parents=True, exist_ok=True)
-    files = sorted((p.name for p in source.glob("p*.png")), key=sort_key)
+    files = sorted((p.name for p in source.glob(prefix + "*.png")), key=sort_key)
     cards = [
         '<figure><img src="%s" alt="%s"><figcaption>%s</figcaption></figure>' % (
             html.escape(name, quote=True), html.escape(name), html.escape(name))

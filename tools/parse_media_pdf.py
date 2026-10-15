@@ -192,8 +192,12 @@ def build_entries(rows):
         entry = entries[-1]
         if row["日期"] and not entry["日期"]:
             entry["日期"] = row["日期"]
-        if row["标题"] and not entry["标题"]:
-            entry["标题"] = row["标题"]
+        if row["标题"]:
+            if not entry["标题"]:
+                entry["标题"] = row["标题"]
+            elif entry["标题"].endswith(("：", ":")) or len(entry["标题"]) < 6:
+                # 表格里标题被换行截断：前一截以冒号收尾或过短，把下一行接上
+                entry["标题"] += row["标题"]
         if row["类别"] and not entry["类别"]:
             entry["类别"] = row["类别"]
         source = {"媒体": row["媒体"], "链接": row["链接"], "日期": row["日期"]}
