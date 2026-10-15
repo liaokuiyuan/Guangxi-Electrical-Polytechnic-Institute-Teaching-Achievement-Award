@@ -9,6 +9,152 @@
     <link type="text/css" rel="stylesheet" href="./css/layui.css"/>
     <link type="text/css" rel="stylesheet" href="./css/common.css"/>
     <link type="text/css" rel="stylesheet" href="./css/cghj.css"/>
+    <style>.award-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: #4A5568;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    background: #EAF1FA;
+    color: #014D98;
+    font-size: 15px;
+}
+
+.award-card {
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+}
+
+.award-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.5rem;
+}
+
+.award-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.award-scroll::-webkit-scrollbar-thumb {
+    background: #C8D2DE;
+    border-radius: 0.2rem;
+}
+
+.award-item {
+    padding: 1.2rem 0.4rem 1.5rem;
+    border-bottom: 0.06rem dashed #E3E8EF;
+}
+
+.award-item:last-of-type {
+    border-bottom: 0;
+}
+
+.award-item .award-img {
+    display: block;
+    width: 100%;
+    max-width: 44rem;
+    margin: 0 auto;
+    border: 1px solid #E3E8EF;
+    border-radius: 0.5rem;
+    background: #FAFBFD;
+    overflow: hidden;
+}
+
+.award-item .award-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.award-item .award-body {
+    max-width: 44rem;
+    margin: 0.9rem auto 0;
+}
+
+.award-item .award-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    color: #014D98;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.award-item .award-name .level {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.award-item .award-name .level.lv-national {
+    background: #C0392B;
+    color: #FFFFFF;
+}
+
+.award-item .award-name .level.lv-province {
+    background: #014D98;
+    color: #FFFFFF;
+}
+
+.award-item .award-time {
+    margin-top: 0.3rem;
+    color: #7A8798;
+    font-size: 15px;
+}
+
+.award-item .award-desc {
+    margin-top: 0.5rem;
+    color: #22334A;
+    font-size: 17px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.award-foot {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 0.06rem dashed #E3E8EF;
+    color: #7A8798;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.award-foot a {
+    color: #005699;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .award-card {
+        height: auto;
+    }
+
+    .award-scroll {
+        overflow: visible;
+    }
+
+    .award-item .award-desc {
+        font-size: 16px;
+    }
+}</style>
     <script type="text/javascript" src="./js/layui.js"></script>
     <script type="text/javascript" src="./js/init.js"></script>
 </head>
@@ -32,7 +178,7 @@
 		<li><a href="implementer.html">主要完成人</a></li>
 		<li><a href="report.html">成果报告</a></li>
 		<li class="selected"><a href="award.html">成果获奖</a></li>
-		<li><a href="https://53plyyj9.mh.chaoxing.com/entry/page/3042461/show">四库平台</a></li>
+		<li><a href="siku.html">四库平台</a></li>
 		<li><a href="kechengjiaocai.html">专著教材</a></li>
 		<li><a href="chengxiaoyingyong.html">成效应用</a></li>
 		<li><a href="liluntuiguang.html">理论推广</a></li>
@@ -45,23 +191,116 @@
         <div class="wid82">
             <div class="main-list-title">
                 <div class="main-list-title-1">成果获奖</div>
-                <div class="main-list-title-2">您的位置：首页 | 成果获奖 </div>
+                <div class="main-list-title-2">您的位置：首页 | 成果获奖</div>
             </div>
-            <div class="main3-body layui-row">
-                <div class="layui-col-md3">
-                    <div class="main3-body-left">
-                        <ul class="layui-menu" id="demo-menu">
-                           <li class="layui-menu-item-group layui-menu-item-down" lay-options="{type: 'group'}">
-                                <div class="layui-menu-body-title">
-                                成果获奖 <i class="layui-icon layui-icon-right"></i>
-                                </div>
-                            </li>
-                        </ul>
+            <div class="main3-body">
+                <div class="main3-body-right award-card">
+                    <div class="main3-body-right-title">代表性获奖成果</div>
+                    <div class="award-intro">
+                        <span class="award-badge">国家级 9 项</span>
+                        <span class="award-badge">省部级 3 项</span>
                     </div>
-                </div>
-                <div class="layui-col-md9">
-                    <div class="main3-body-right">
-                        <iframe class="wp_pdf_player" src="pdfjs/web/viewer.html?file=../../new%20pdf/%E6%88%90%E6%9E%9C%E8%8E%B7%E5%A5%96.pdf" allowfullscreen></iframe>
+                    <div class="award-scroll">
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p32_1.png" alt="中国国际“互联网+”大学生创新创业大赛 全国金奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">中国国际“互联网+”大学生创新创业大赛 全国金奖<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2021 年 10 月</div>
+                            <div class="award-desc">第七届中国国际“互联网+”大学生创新创业大赛全国总决赛金奖。参赛作品《白色森林儿童美术》，指导教师周晗、张雪雅、施炜、姜攀等。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p35_1.png" alt="“挑战杯”全国大学生课外学术科技作品竞赛 全国二等奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">“挑战杯”全国大学生课外学术科技作品竞赛 全国二等奖<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2023 年</div>
+                            <div class="award-desc">第十八届“挑战杯”全国大学生课外学术科技作品竞赛二等奖。参赛作品《水域激隐救生——全球汽车智能逃生装置领跑者》，指导教师赵春、潘知南、张亚、韦祖恒、黄熙、邓新。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p32_4.png" alt="“挑战杯”中国大学生创业计划竞赛 全国银奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">“挑战杯”中国大学生创业计划竞赛 全国银奖<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2022 年</div>
+                            <div class="award-desc">“挑战杯”中国大学生创业计划竞赛全国决赛银奖。学校学生团队参赛并获奖。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p41_1.png" alt="“挑战杯”中国大学生创业计划竞赛 全国银奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">“挑战杯”中国大学生创业计划竞赛 全国银奖<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2024 年</div>
+                            <div class="award-desc">“挑战杯”中国大学生创业计划竞赛全国决赛银奖。学校学生团队参赛并获奖。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p21_4.png" alt="广西职业院校教师教学技能大赛 一等奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">广西职业院校教师教学技能大赛 一等奖<span class="level lv-province">省部级</span></div>
+                            <div class="award-time">2025 年 1 月</div>
+                            <div class="award-desc">2024 年广西职业院校教师教学技能大赛混合式教学比赛高职组一等奖。参赛作品《创新与创业教育》，完成人康冰心、丘宁、李静，广西壮族自治区教育厅颁发。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p20_1.png" alt="全国职业院校信息化教学大赛 一等奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">全国职业院校信息化教学大赛 一等奖<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2017 年 11 月</div>
+                            <div class="award-desc">2017 年全国职业院校信息化教学大赛高职组信息化教学设计比赛一等奖。参赛作品《建筑基础识图与构造》，完成人孙俏、刘积标、陶伟。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p23_5.png" alt="广西社会科学优秀成果奖 三等奖" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">广西社会科学优秀成果奖 三等奖<span class="level lv-province">省部级</span></div>
+                            <div class="award-time">2025 年 10 月</div>
+                            <div class="award-desc">广西第十八次社会科学优秀成果奖三等奖。成果名称《创新与创业教育》，获奖者张海燕、李向红、康冰心、朱广超、许凤盼等，广西壮族自治区人民政府颁发。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p23_2.png" alt="中国国际“互联网+”大学生创新创业大赛 优秀创新创业导师" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">中国国际“互联网+”大学生创新创业大赛 优秀创新创业导师<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2021 年</div>
+                            <div class="award-desc">第七届中国国际“互联网+”大学生创新创业大赛优秀创新创业导师。学校创新创业教育教师团队获此称号。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p23_6.png" alt="“广西技术能手”荣誉称号" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">“广西技术能手”荣誉称号<span class="level lv-province">省部级</span></div>
+                            <div class="award-time">2019 年 12 月</div>
+                            <div class="award-desc">广西壮族自治区人力资源和社会保障厅授予“广西技术能手”荣誉称号。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p07_1.png" alt="国家级科技企业孵化器" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">国家级科技企业孵化器<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2021 年 1 月</div>
+                            <div class="award-desc">国家科学技术部认定（备案）为国家级科技企业孵化器，学校创新创业孵化载体建设获国家级认可。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p06_5.png" alt="国家级应用技术协同创新中心" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">国家级应用技术协同创新中心<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2019 年 7 月</div>
+                            <div class="award-desc">教育部认定学校移动互联应用技术协同创新中心为国家级应用技术协同创新中心（移动互联应用技术协同创新中心）。</div>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-img"><img src="new%20images/成果获奖/p06_6.png" alt="国家级生产性实训基地" loading="lazy"></div>
+                        <div class="award-body">
+                            <div class="award-name">国家级生产性实训基地<span class="level lv-national">国家级</span></div>
+                            <div class="award-time">2019 年 7 月</div>
+                            <div class="award-desc">教育部认定学校智能制造技术实训基地为国家级生产性实训基地（智能制造技术实训基地）。</div>
+                        </div>
+                    </div>
+                        <div class="award-foot">
+                            完整获奖清册（含国家级 21 项、省部级 36 项及学生竞赛、课程建设、教材建设、师资建设等分类明细）见
+                            <a href="pdfjs/web/viewer.html?file=../../new%20pdf/%E6%88%90%E6%9E%9C%E6%8E%88%E5%A5%96.pdf" target="_blank" rel="noopener">成果获奖.pdf</a>。
+                        </div>
                     </div>
                 </div>
             </div>

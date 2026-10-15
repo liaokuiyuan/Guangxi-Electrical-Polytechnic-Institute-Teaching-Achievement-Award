@@ -1,0 +1,1088 @@
+{
+  "http://edu.gxnews.com.cn/staticpages/20150920/newgx55fe8277-13605832.shtml": {
+    "状态": 200,
+    "标题": "",
+    "说明": "取到响应头但读不到正文：IncompleteRead",
+    "可内嵌": true
+  },
+  "https://www.eol.cn/guangxi/guangxinews/201509/t_201509231320283.shtml": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://stu.people.com.cn/n1/2016/0429/c402103-28315159.html": {
+    "状态": 206,
+    "标题": "第十一届中国大学生年度人物候选人常双事迹--教育",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.ep12.com/a/zhijiaoxinwen/tuwenzhijiao/2016/0720/42223.html": {
+    "状态": 200,
+    "标题": "广西八桂职教网--有职教的地方就有我们!|广西电力职业技术学院暑期赴恭城开展“三下乡”社会实践服务活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://edu.gxnews.com.cn/staticpages/20170505/newgx590c61d9-16162398.shtml": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院“园院协同”育人创佳绩- 广西教育新闻网",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.ep12.com/plus/view.php?WebShieldSessionVerify=4C85bQM9bypQqKgNo03A&aid=46504": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院举办职业教育活动周开放日活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.workercn.cn/358/201901/29/190129071751663.shtml": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "http://app-h5.ngzb.com.cn/shareArticle?newsid=31744689&app_id=5020&sn=4D1EDE4CD_2AEF2A3166C192DCF68A44DC7C97AF1583D041389FB273B35799C44F02F0F7972273EFAFC89875F4B63322F4F5E02245F3EE7E8858002DC4B52CFA2&platformi_d=3&from=groupmessage": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.ep12.com/a/xinwen/dongtai/2019/0329/61470.html": {
+    "状态": 200,
+    "标题": "广西电力职院举行“创新学院”揭牌仪式暨第五届中国“互联网+”大学生创新创业大赛校赛启动会",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.jyb.cn/rmtzcg/jzz/201904/t2019040122_1132.html": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.ep12.com/a/xinwen/dongtai/2019/0425/62045.html": {
+    "状态": 200,
+    "标题": "广西职业院校创新创业教学辅导与创新创业项目培训会在广西电力职业技术学院举行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://xiaoyuan.cycnet.com.cn/s?signature=vJnXBk5Pw0ALYDjZx8G4ZXXnztLE2YaolKN2Q3yzm6VREOr9pg&uid=1494173&phonecode_=b7d9bd90c0d496009d88f1bcffea7731&scid=435702&time=1566205364&app_version=(null)&sign=8a9a3b4bebe43110cd7dd7d5d1a138a0&appinstall=0&from=gr#": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院学子三下乡：带“电”下乡 爱“建”于行",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://www.cfgw.net.cn/epaper/content/201912/25/content22801.htm": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "https://mp.weixin.qq.com/s/4RJGg-hKkK7W-_BEZwCHMw": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "https://news.gxtv.cn/article/detail7f4972bfa39e430_6ac1fab6b5a8434b3.html?10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1=&from=singlemessage": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "http://www.gxnews.com.cn/staticpages/20200918/newgx5f63f515-19828176.shtml": {
+    "状态": 200,
+    "标题": "国企开放日活动走进广西电力职院",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2020/0920/c179430-34304525.html": {
+    "状态": 206,
+    "标题": "共享产教融合好政策 搭建多方共赢新平台",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://resource.cloudgx.cn//files/gxapp/News/202012/23/644925.html?isshare=1&t=1608717978": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": true
+  },
+  "https://gx.cri.cn/chinanews/20210122/3407298b-faef-fe36-69e3-54ef99f6931a.html?fonts=1&nopic=0&userId=&men_uId=b6b0c33a1e594ee59e40b5d248250e1a&languageId=zh&chinaNewsType=app&language=zh": {
+    "状态": 200,
+    "标题": "【代表心声】广西“90后”人大代表马宁：加强边境地区基础设施建设 促进对外经济贸易发展",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://resource.cloudgx.cn//files/gxapp/News/202103/16/684508.html?isshare=1&t=1615857597": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://lx.huanqiu.com/article/43Xz2DanJ7B": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院：需求导向，精益培养数字化“双创”人才",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://lx.huanqiu.com/article/43qGuqqDmWr": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院：精益育人 成就出彩人生",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://lx.huanqiu.com/article/43qGkPfDOHA": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院：“精益产创团”送教上门，助毛南族振兴奔小康",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://resource.cloudgx.cn/files/gxapp/News/202107/07/744397.html?isshare=1&t=1625653345": {
+    "状态": 206,
+    "标题": "",
+    "说明": "取到响应头但读不到正文：URLError",
+    "可内嵌": true
+  },
+  "https://v.gxnews.com.cn/a/20352621": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院:让学生成为创新创业生力军",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.chinazy.org/info/1009/8010.htm": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院： 让学生成为创新创业的生力军",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://www.ep12.com/a/xinwen/dongtai/2021/0712/79675.html": {
+    "状态": 200,
+    "标题": "广西电力职院： 让学生成为创新创业的生力军",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://resource.cloudgx.cn/files/gxapp/News/202107/08/745053.html?isshare=1&t=1625799590": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://m.chinanews.com/wap/detail/chs/zw/4693360hapaffedf.shtml": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://ssw.gxrb.com.cn/json/interface/epaper/api.php?name=gxrb&date=2021-07-14&code=007&xuhao=4": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://tzpy.centv.cn/article/286": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": false
+  },
+  "http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1_652400938365609402&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：RemoteDisconnected",
+    "可内嵌": false
+  },
+  "https://hqtime.huanqiu.com/share/article/488kJqYxLPU": {
+    "状态": 200,
+    "标题": "专创赋能，“蚕燃一新”助推广西桑蚕产业转型升级",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://resource.cloudgx.cn/files/gxapp/News/202205/28/896769.html?isshare=1&t=1653793567": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/qaHYw7osDoaUWiSbZG7W6Q": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://mp.weixin.qq.com/s?biz=Mzk2NDQyMTQ3__Mg==&mid=2247543127&idx=2&sn=84ef1f3954e3d00cb78cb3f1216e5122&source=41&poctoken=HPytnmijgrvLbxW8KoQKCnVEYs_hczNssCjOqCU3": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "https://lx.huanqiu.com/article/48RXgmrXZfG?qq-pf-to=pcqq.c2c": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院双创公益团队助力乡村振兴",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2022/0617/c390645-35320185.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院举行“劳模工匠进学校 思政教师进企业”系列活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/h0ZN73I6m8JLsZFohfw2bw": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://resource.cloudgx.cn/files/gxapp/News/202207/19/922535.html?isshare=1&t=1658230885": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2022/0810/c179409-40075279.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院：聚力“四项举措” 为乡村振兴塑“形”铸“魂”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s?biz=MzA3NzE4OTY4Ng__==&mid=2660216504&idx=2&sn=efac259a7b1893b93687df03121e5671&chksm=842ec9e1b35940f71d306592105c461e4f56a2b477c19d63576105db4ddd3866617e1b6b3a3f&mpshare=1&scene=1&srcid=0904WiRaSniNDs0jdmcmolkt&sharersharetime=": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "https://baijiahao.baidu.com/s?id=1743488220501900607&wfr=spider&for=pc": {
+    "状态": 200,
+    "标题": "广西电职院面向东盟成功举办系列“能源电力”国际化培训",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://m.chinanews.com/wap/detail/chs/zw/5321668hcexpzidf.shtml": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1667777554085616043&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：RemoteDisconnected",
+    "可内嵌": false
+  },
+  "https://hqtime.huanqiu.com/share/article/4APZQXH8CIz": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院自动化专业群构筑“五型融合”“双创”实践育人大场域",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://lx.huanqiu.com/article/4APZVmlVUZY": {
+    "状态": 200,
+    "标题": "产教“五融合” 精益培养“敢闯会创”人才",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://hqtime.huanqiu.com/share/article/4APZZKYQXv9": {
+    "状态": 200,
+    "标题": "聚焦乡村振兴，“稻亦有道”助力广西宾阳米业走好种、产、销三步棋",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://resource.cloudgx.cn/files/gxapp/News/202301/06/990104.html?isshare=1&t=1673005402": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s?biz=Mzk2NDQyMTQ3__Mg==&mid=2247543352&idx=2&sn=89a0cb465bd97aec7be4771adb8e01dc&source=41&poctoken=HKeon_mij5ioHyMd81nRbLuYhafw2y-wx3dYYxjcQ": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "https://m.chinanews.com/wap/detail/chs/zw/9968756.shtml": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://m.chinanews.com/wap/detail/chs/zw/9986187.shtml": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2023/0407/c390645-40367425.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院打造产教融合共同体建设典范",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1649788697009508352": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2023/0423/c390645-40388130.html": {
+    "状态": 206,
+    "标题": "全国电力企业院校创新创业工作培训及经验交流会在南宁召开",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.gx.chinanews.com.cn/kjwt/2023-04-24/detail-ihcnrtzv5406544.shtml": {
+    "状态": 200,
+    "标题": "全国电力企业院校创新创业工作培训及经验交流会南宁召开",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://edu.gxnews.com.cn/staticpages/20230426/newgx64493e71-21141927.shtml": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院创新非遗文化情景思政课形式",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.pdnews.cn/video/30045155412": {
+    "状态": 200,
+    "标题": "电力保卫者•刘英龙",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2023/0621/c390645-40466558.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院双创教育生态赋能创新型工匠培养",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://zgt.china.com.cn/v2/content/2023-06/19/content34691.html": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：RemoteDisconnected",
+    "可内嵌": false
+  },
+  "http://www.news.cn/expo/20230713/dab9fe827e764679af86865e04b276e0/c.html": {
+    "状态": 206,
+    "标题": "数智赋能·双创聚势，广西电力双创团队助力乡村振兴跑出“加速度”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/nqPsIVKAba-HWyw-PIHGzw": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://difang.gmw.cn/2023-08/04/content36745304._htm": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "http://paper.jyb.cn/zgjyb/html/2023-08/10/content627547.ht_m?div=-1": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": false
+  },
+  "https://m.huanqiu.com/article/4EKGn5jcwTE": {
+    "状态": 200,
+    "标题": "“00后”大学生创业路：致力研发新能源充电桩新技术",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2023/0830/c179464-40551704.html": {
+    "状态": 206,
+    "标题": "携手共创促发展 联盟聚力向未来",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1696855369280204800": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.gx.chinanews.com.cn/kjwt/2023-08-31/detail-ihcssawx3960814.shtml": {
+    "状态": 200,
+    "标题": "广西职业院校创新创业教育联盟2023年度工作会议在南宁召开",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2023/0901/c390645-40554202.html": {
+    "状态": 206,
+    "标题": "青星聚力红水河 科技振“忻”筑未来",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2023/0901/c390645-40554182.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院开展暑期中外大学生社会实践活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.chinazy.org/info/1009/14447.htm": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院：让非遗“活”起来 打造文化育人“潮”品牌",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://jyt.gxzf.gov.cn/jyxw/jyyw/t17141139.shtml": {
+    "状态": 200,
+    "标题": "【2023职业教育联展暨论坛③】广西电力职业技术学院：共建电力丝路学院 培养新能源装备技术国际人才 - 教育工作动态 - 广西壮族自治区教育厅网站",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "http://paper.jyb.cn/zgjyb/html/2023-09/26/content629385.ht_m?div=-1": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": false
+  },
+  "https://c.m.163.com/news/a/IGN7UEFL0530QRMB.html?from=wapredirect&sp_ss=adappc&referFrom=&s_pssid=2c0dcc4523550e0dcdb794d481f434d3&spsw=1&isFromH5Share=article": {
+    "状态": 206,
+    "标题": "中泰8校联合办学 赋能电力人才培养",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1713462659538292736": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.gx.chinanews.com.cn/kjwt/2023-10-31/detail-ihcuqerk7378745.shtml": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院：打造\"数字工匠\"就业服务体系",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://mp.weixin.qq.com/s/SaZ-gXshcVpJEcRY2efmGw": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://apph5.cloudgx.cn/article/sync1726991365019611136": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxpic.gxrb.com.cn/zjlm/sjbwzy/index.html?url=https://gxpic.gxrb.com.cn/qk/2023n11yzd529q/zd1_91439/154226.json&qUrl=null": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1739980805412290560": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2023/1230/c390645-40698780.html": {
+    "状态": 206,
+    "标题": "“五心”护航强心理 立德树人育 “匠心”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-03-11&code=005&xuhao=2": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s?biz=Mzg2ODYzMjQ1M__g==&mid=2247543845&idx=1&sn=eb9f669917e11563bebfaaef680a7cf5&chksm=ceab3ecef9dcb7d8d6629bcccf1666349c7e737dea5f5a49281cbcb79fc0ca9e290379e3f5fc&mpshare=1&scene=23&srcid=0403ZJvsmkQjhSF3IItrytra&sharershareinf": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1781665477372342272": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/MXjgGaqKMFYzfV3-dY1UVA": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://article.xuexi.cn/articles/index.html?artid=461_9051717320159656&t=1716446863441&showmenu=false&studystyleid=video__default&source=share&sh_areto=wxsingle&itemid___=4619051717320159656&refreadid=5753d657-__e4f4-4d80-8b0e-758be937174f172269870_5841": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20240523/f3bebf9b6b3b48d6af94690eeacebb35/c.html": {
+    "状态": 206,
+    "标题": "广西：职业院校齐炫技 技能人才展风采",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/v7AbbzO8v33uvr-GdYlhXQ": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://tech.china.com/article/20240528/052024152_6178.html": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "https://tech.ifeng.com/c/8ZxEQLWrBRv": {
+    "状态": 200,
+    "标题": "校园创业新星王俊杰：从“梦想家”到“创新创业引领者”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://caijing.chinadaily.com.cn/a/202405/28/WS6655942ea3109f7860ddfccf.html": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2024/0528/c390645-40859432.html": {
+    "状态": 206,
+    "标题": "校园创业新星王俊杰：从“梦想家”到“创新创业引领者”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-06-05&code=009&xuhao=1": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/0623/c179464-40888544.html": {
+    "状态": 206,
+    "标题": "广西职业院校创新创业教育联盟2024年度工作会议在南宁召开",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1804883272176930816": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20240624/f8a11dd3d32746d198d4762114a4b3e2/c.html": {
+    "状态": 206,
+    "标题": "广西职业院校创新创业教育联盟2024年度工作会议在南宁召开",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://app.people.cn/h5/detail/normal/5856756854555648": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://science.china.com.cn/2024-07/05/content42852632._htm": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：RemoteDisconnected",
+    "可内嵌": false
+  },
+  "https://tech.china.com/article/20240705/072024154_3961.html": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "http://gx.news.cn/20240720/90bab180a36e46b09ee1a77db71c0104/c.html": {
+    "状态": 206,
+    "标题": "校企合作打造电力工匠班",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/0724/c390645-40922405.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院中国—泰国绿色电力现代工匠学院首届“中文+技能”短期项目圆满举办--广西频道",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20240725/d73318d5a06a47bebb2acbd527413b6d/c.html": {
+    "状态": 206,
+    "标题": "中泰一家亲 职教携手行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s?biz=Mzg3MzU2NTM4__MA==&mid=2247517631&idx=2&sn=fb6490d0d4d7c1f2b4832cc9cbee11f6&chksm=cfa9b36de44aaa95de761c179aba3a69b1f1dd125cd8765c60f28f8b761f1ffecbb8575c79c4&mpshare=1&scene=23&srcid=0805DQR2ASf9wJVIcLhqCP8s&sharershareinfo": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20240814/df469f7f6f5b4608be059252b8855ae7/c.html": {
+    "状态": 206,
+    "标题": "“电小潮”中华文化传承团走进凭祥——广西电力职业技术学院开展2024暑期“三下乡”活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20240814/da26e1140e014e2b8b813d8e0df7f514/c.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院实践团走进凭祥市柳班村板班屯",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1823513834267725824": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.163.com/news/article/JAP436AK00019UD6.html": {
+    "状态": 404,
+    "标题": "",
+    "说明": "HTTP 404",
+    "可内嵌": false
+  },
+  "https://hqtime.huanqiu.com/share/article/4JETxRYFtyO": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院“水润未来”双创团队：助力国家海绵城市建设",
+    "说明": "正常",
+    "可内嵌": false
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-09-10&code=014&xuhao=2": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-09-18&code=007&xuhao=5": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/1126/c390645-41055390.html": {
+    "状态": 206,
+    "标题": "以“五融五合”赋能党建引领业务“双融双促”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/1203/c390645-41062858.html": {
+    "状态": 206,
+    "标题": "以“四大工程”赋能打造“数字工匠”就业服务体系",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/1203/c390645-41062852.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院龙狮文化赋能电力工匠",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1863927941341093888": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20241204/8119dc7a0e584b86aef9b5943ce443c0/c.html": {
+    "状态": 206,
+    "标题": "行企校联创 共育能源电力产业导师",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2024/1210/c390645-41071190.html": {
+    "状态": 206,
+    "标题": "构建“一核四驱动四提升”组织育人体系，增强学生社会责任意识",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2024-12-24&code=007&xuhao=1": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0311/c179430-41159938.html": {
+    "状态": 206,
+    "标题": "以文明实践传薪火 向雷锋叔叔敬个礼",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://app.xinhuanet.com/news/article.html?articleId=edd0cc8eb77bd1f694c36218497bef6b&timestamp=3154": {
+    "状态": 200,
+    "标题": "产教融合 广西电力职业技术学院探索AI人才培育新模式",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://m.jyb.cn/rmtxwwyyq/jyxx1306/202504/t202504272111337464wap.ht__ml": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.163.com/dy/article/JUB1QKQ70550B6IS.html?f=post2020dyreco__mmends": {
+    "状态": 200,
+    "标题": "致敬全国劳模｜陈琼：十六年匠心练就电力“最强大脑”|通讯员|劳动模范_网易订阅",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20250513/5f49b8913f43437bb5bcbf924214192a/c.html": {
+    "状态": 206,
+    "标题": "“同上一门创新实践课”共享优质教育资源",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0516/c179462-41229924.html": {
+    "状态": 206,
+    "标题": "以“八字诀”激活“一融双高”建设“新引擎”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://paper.jyb.cn/zgjyb/html/2025-06/02/content14474918__576132.htm": {
+    "状态": 0,
+    "标题": "",
+    "说明": "打不开：URLError",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2025/0604/c179462-41249759.html": {
+    "状态": 206,
+    "标题": "破茧智控 精耕沃土 犁向未来",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/yQCJQx2jG-lBWEvsHprCpQ": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://mp.weixin.qq.com/s/n44dPzDZ4xhYmBJG8nkgnA": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "http://gx.people.com.cn/n2/2025/0612/c179462-41257816.html": {
+    "状态": 206,
+    "标题": "构建“6618电亮+”党建赋能体系 凝心聚力推进事业高质量发展",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20250624/606263b079314a849b8d8a82551b792f/c.html": {
+    "状态": 206,
+    "标题": "广西职业院校创新创业教育联盟2025年度工作会议举行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://tech.china.com/articles/20250629/202506291692512.html": {
+    "状态": 200,
+    "标题": "科技“利剑”护航，绘就水环境生态新画卷",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://tech.china.com/articles/20250629/202506291692511.html": {
+    "状态": 200,
+    "标题": "跨界·智变 广西电力职业技术学院“人工智能+”助力四维产业向新行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://tech.ifeng.com/c/8ka2hUKDV2w": {
+    "状态": 200,
+    "标题": "科技“利剑”护航，绘就水环境生态新画卷",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://tech.ifeng.com/c/8ka3DwrvKN9": {
+    "状态": 200,
+    "标题": "跨界·智变 广西电力职业技术学院“人工智能+”助力四维产业向新行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0630/c179462-41276382.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院“人工智能+”助力四维产业向新行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0707/c179462-41283280.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院助力绿色基建发展生态",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0707/c179462-41283304.html": {
+    "状态": 206,
+    "标题": "校企共筑人才“蓄水池” 凝聚发展“源动力”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20250708/7321d5f5b7764dfa9ee3aca5d8835e03/c.html": {
+    "状态": 206,
+    "标题": "逐梦深蓝 探脉未来 广西电力职业技术学院探索跨界创新",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s/n2PZsetDuFPw9vfq67y__g": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0725/c179462-41302584.html": {
+    "状态": 206,
+    "标题": "青春“电亮”靖西边关 科技研学赋能未来",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20250726/23bb7aa2620d411aa319d56dec5f397f/c.html": {
+    "状态": 206,
+    "标题": "“电小潮”中华文化传承团赴靖西开展多彩“三下乡”活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0805/c179409-41313375.html": {
+    "状态": 206,
+    "标题": "创新种子生根记：广西电力学子王俊杰的逐梦征程",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0805/c179409-41313021.html": {
+    "状态": 206,
+    "标题": "微视：匠心筑山水，非遗载思政",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0814/c179462-41322151.html": {
+    "状态": 206,
+    "标题": "构建“12345”党建工作机制 以高质量党建赋能学院高质量发展",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://new.chinareports.org.cn/index/news/50196.html": {
+    "状态": 200,
+    "标题": "跨越山海的成长——张小晶用三年把中国变成“第二故乡”",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0909/c179462-41346420.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院与中国广核集团成员公司校企合作项目顺利启动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://mp.weixin.qq.com/s?biz=MjM5MTM1MDExMw==&mid=2651989770&idx=1&sn=33cff57d09b978ef8430626eab79e8a5&chksm=bc6f412914638f28af31da391eee3a013784fcce83b7398d2a7b664d8a4eac2dfc73e5f5c730&mpshare=1&scene=23&srcid=0909Vsp4lIuAPRn6R9KTmPBV&sharershareinf": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": false
+  },
+  "https://apph5.cloudgx.cn/article/sync1965604626355060736": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://new.chinareports.org.cn/index/news/51113.html": {
+    "状态": 200,
+    "标题": "桂越高校携手共育能源电力人才",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/0919/c179462-41357100.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院与越南电力大学签署合作备忘录",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://tzpy.1xxmt.com/article/3357": {
+    "状态": 200,
+    "标题": "“电亮”网络之光：“四链融合”构建高职 网络育人新生态-广西电力职业技术学院",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1978016069049991168": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1981589528661590016": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://new.chinareports.org.cn/index/news/56201.html": {
+    "状态": 200,
+    "标题": "“中广核新能源杯”第二届大学生风力发电职业技能竞赛决赛开幕",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/1030/c179462-41396465.html": {
+    "状态": 206,
+    "标题": "“中广核新能源杯”第二届大学生风力发电职业技能竞赛决赛开幕",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1988991090286329856": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://www.gxnews.com.cn/staticpages/20251113/newgx6915f7e9-21869505.shtml": {
+    "状态": 200,
+    "标题": "广西“学生军”征战全运会，南狮项目实现历史性突破",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://new.chinareports.org.cn/index/news/59877.html": {
+    "状态": 200,
+    "标题": "为桂争光！广西电力职院龙狮队首战全运会实现广西南狮项目的历史性突破",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1989247027836289024": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/1205/c179462-41433735.html": {
+    "状态": 206,
+    "标题": "打造“1+5+N”智慧党建云平台 以智慧云网赋能党建工作提质增效",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync1996876878352822272": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://gxrb.gxrb.com.cn/?name=gxrb&date=2025-12-07&code=009&xuhao=1": {
+    "状态": 200,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://apph5.cloudgx.cn/article/sync2002911286531911680": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2025/1222/c179462-41450127.html": {
+    "状态": 206,
+    "标题": "茶香润心 文化铸魂",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0129/c179462-41486827.html": {
+    "状态": 206,
+    "标题": "联盟搭台“云端共学” 校际共享优质双创课程资源",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0305/c179462-41516051.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院国际学生斩获第二届职业教育宝石王杯大赛冠军",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0310/c179462-41519748.html": {
+    "状态": 206,
+    "标题": "广西电力职院：将新时代电力发展伟大成就融入电力工匠培养",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0312/c179462-41521692.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院首届海尔国际工匠订单班启动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://new.chinareports.org.cn/index/news/83078.html": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院联合海尔智家股份有限公司 启动中国—泰国绿色电力现代工匠学院 首届海尔国际工匠订单班",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20260314/78506a979094493fad479f86718fa719/c.html": {
+    "状态": 206,
+    "标题": "中国—泰国绿色电力现代工匠学院首届海尔国际工匠订单班开班",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0316/c179462-41524636.html": {
+    "状态": 206,
+    "标题": "2026年广西职业院校技能大赛创新创业赛道在南宁举行",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20260318/ad852dd4b55d4b7db10d4c456c51dda2/c.html": {
+    "状态": 206,
+    "标题": "2026年广西职业院校技能大赛高职组新闻传播赛道竞赛举办",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0403/c179462-41543344.html": {
+    "状态": 206,
+    "标题": "让清泉流淌在石山深处",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "https://web.cloudgx.cn/news?id=1222385": {
+    "状态": 206,
+    "标题": "",
+    "说明": "正文里没有 title",
+    "可内嵌": true
+  },
+  "http://www.chinareports.org.cn/index/news/93662.html": {
+    "状态": 200,
+    "标题": "广西电力职院国际学生获2026“汉语桥”华南预选赛风采奖",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.news.cn/20260503/bfa8fa8bac80423fbd0ba0dc1e13010b/c.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院举办红色文化校园行活动",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.chinareports.org.cn/index/news/102981.html": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院联合海尔智家股份有限公司在泰揭牌中国—泰国绿色电力现代工匠学院",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.gx.xinhuanet.com/20260617/ea7b698079ba460fa0f30fed64d1bb85/c.html": {
+    "状态": 206,
+    "标题": "中国—泰国绿色电力现代工匠学院揭牌",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://www.chinareports.org.cn/index/news/103771.html": {
+    "状态": 200,
+    "标题": "广西电力职业技术学院代表团访问越南电力大学",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0618/c179462-41615188.html": {
+    "状态": 206,
+    "标题": "广西电力职业技术学院深耕东盟国际化办学",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0618/c179462-41614545.html": {
+    "状态": 206,
+    "标题": "广西电力职院构建“五心”护航育人新格局",
+    "说明": "正常",
+    "可内嵌": true
+  },
+  "http://gx.people.com.cn/n2/2026/0618/c179462-41615029.html": {
+    "状态": 206,
+    "标题": "跨校交流 携手共育“引路人”",
+    "说明": "正常",
+    "可内嵌": true
+  }
+}

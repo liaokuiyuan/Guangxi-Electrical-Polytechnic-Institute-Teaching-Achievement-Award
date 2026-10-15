@@ -37,6 +37,72 @@ function initProjectSite() {
     buildApplicationNavigation(currentPage);
     buildPdfLayout(currentPage);
     normalizeAwardLinks();
+    fixRelativeLinks();
+}
+
+/* ========================================
+   兼容部署在子目录 / 被 CMS 包装的情况
+
+   站点上传到博达等平台后，如果页面不是放在站点根目录，导航里写的
+   相对地址（award.html 这类）就会解析错位置、点进去 404。
+   这里在页面加载后探测本站真实基地址：先按相对地址取 index.html，
+   取不到就沿当前网址逐级往上试，找到能打开同级页面的那一层，
+   再把所有相对链接改成以该层为基准的地址。
+   探测失败（例如离线预览、静态托管根目录）时什么都不改。
+   ======================================== */
+function fixRelativeLinks() {
+    var page = (window.location.pathname.split('/').pop() || '').toLowerCase();
+    if (!page || /[^a-z0-9._-]/.test(page)) return;  // 页面名不是简单文件名时不动
+
+    var base = window.location.href.replace(/[^/]*$/, '');  // 当前页面所在目录
+    probe(base, function (ok) {
+        if (ok) return;  // 相对地址本来就对，什么都不用做
+        var parts = window.location.pathname.split('/');
+        parts.pop();  // 去掉页面文件名
+        var candidates = [];
+        while (parts.length > 0) {
+            parts.pop();
+            candidates.push(window.location.origin + parts.join('/') + '/');
+        }
+        tryNext(candidates, 0, base);
+    });
+}
+
+function probe(dir, callback) {
+    try {
+        var request = new XMLHttpRequest();
+        request.open('HEAD', dir + 'index.html', true);
+        request.onreadystatechange = function () {
+            if (request.readyState !== 4) return;
+            callback(request.status >= 200 && request.status < 400);
+        };
+        request.onerror = function () { callback(false); };
+        request.send();
+    } catch (error) {
+        callback(false);
+    }
+}
+
+function tryNext(candidates, index, fallbackBase) {
+    if (index >= candidates.length) {
+        rewriteLinks(fallbackBase);
+        return;
+    }
+    probe(candidates[index], function (ok) {
+        rewriteLinks(ok ? candidates[index] : null);
+        if (!ok) tryNext(candidates, index + 1, fallbackBase);
+    });
+}
+
+function rewriteLinks(base) {
+    if (!base) return;
+    var links = document.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+        var href = links[i].getAttribute('href');
+        if (!href || /^(#|javascript:|https?:|mailto:|tel:)/i.test(href)) continue;
+        if (href.indexOf(base) === 0) continue;
+        links[i].setAttribute('href', base + href.replace(/^\.?\//, ''));
+    }
 }
 
 function updateProjectTitle(projectTitle) {
@@ -124,7 +190,6 @@ function buildPdfLayout(currentPage) {
     var pdf = document.querySelector('.wp_pdf_player');
     var isApplicationPage = currentPage === 'shenbaoshu.html' || currentPage === 'report.html';
     if (!pdf && !isApplicationPage) return;
-
     var main = document.querySelector('.main3');
     var titleRow = main && main.querySelector('.main-list-title');
     var body = main && main.querySelector('.main3-body');
@@ -140,10 +205,13 @@ function buildPdfLayout(currentPage) {
     subnav.setAttribute('aria-label', '本栏目二级菜单');
 
     if (isApplicationPage) {
+        // 成果申报书与成果报告改成一个页面里的两块面板，顶部两个按钮页内切换。
+        // 原来两个按钮是页面链接，一点就整页跳走，另一个按钮跟着消失，用户以为菜单没了。
         if (pageTitle) pageTitle.textContent = '成果申报';
+        if (contentColumn) setupApplicationPanels(contentColumn, currentPage);
         subnav.innerHTML =
-            '<a href="shenbaoshu.html"' + (currentPage === 'shenbaoshu.html' ? ' class="active"' : '') + '>申报书</a>' +
-            '<a href="report.html"' + (currentPage === 'report.html' ? ' class="active"' : '') + '>成果报告</a>';
+            '<button type="button" data-application="shenbaoshu">申报书</button>' +
+            '<button type="button" data-application="report">成果报告</button>';
     } else if (sidebarColumn) {
         var sourceLinks = sidebarColumn.querySelectorAll('.layui-menu a[href]');
         var panelItems = sidebarColumn.querySelectorAll('.sidebar-item[data-index]');
@@ -197,6 +265,70 @@ function buildPdfLayout(currentPage) {
     }
     if (sidebarColumn) sidebarColumn.classList.add('pdf-sidebar-source');
     if (contentColumn) contentColumn.classList.add('pdf-content-column');
+
+    if (isApplicationPage && contentColumn) {
+        bindApplicationSwitcher(contentColumn, subnav);
+    }
+}
+
+/* ========================================
+   成果申报：申报书 / 成果报告 两块面板
+   ======================================== */
+function setupApplicationPanels(contentColumn, currentPage) {
+    if (contentColumn.querySelector('#pdf-report') && contentColumn.querySelector('#pdf-shenbaoshu')) return;
+
+    var player = contentColumn.querySelector('.wp_pdf_player');
+    if (!player) return;
+
+    // report.html 自带的 iframe 指的是成果报告，shenbaoshu.html 指的是申报书，
+    // 先认清楚现有这一块到底是哪份材料，再把两块面板补齐。
+    var currentSrc = decodeURIComponent(player.getAttribute('src') || '');
+    var existingKey = currentSrc.indexOf('成果报告') !== -1 ? 'report' : 'shenbaoshu';
+    var otherKey = existingKey === 'report' ? 'shenbaoshu' : 'report';
+    var FILES = { shenbaoshu: '成果申报书.pdf', report: '成果报告.pdf' };
+
+    var existingPanel = player.closest('.pdf-panel');
+    if (!existingPanel) {
+        existingPanel = document.createElement('div');
+        existingPanel.className = 'pdf-panel';
+        player.parentNode.insertBefore(existingPanel, player);
+        existingPanel.appendChild(player);
+    }
+    existingPanel.id = 'pdf-' + existingKey;
+    existingPanel.classList.add('active');
+
+    var other = document.createElement('div');
+    other.className = 'pdf-panel';
+    other.id = 'pdf-' + otherKey;
+    other.innerHTML = '<iframe class="wp_pdf_player" src="pdfjs/web/viewer.html?file=../../new%20pdf/' +
+        encodeURIComponent(FILES[otherKey]) + '" allowfullscreen></iframe>';
+    existingPanel.parentNode.insertBefore(other, existingPanel.nextSibling);
+
+    // 从成果报告入口进来时，默认展示的就是成果报告
+    showApplicationPanel(contentColumn, currentPage === 'report.html' ? 'report' : 'shenbaoshu');
+}
+
+function showApplicationPanel(contentColumn, key) {
+    Array.prototype.forEach.call(contentColumn.querySelectorAll('.pdf-panel'), function (panel) {
+        panel.classList.remove('active');
+    });
+    var target = contentColumn.querySelector('#pdf-' + key);
+    if (target) target.classList.add('active');
+    Array.prototype.forEach.call(document.querySelectorAll('.pdf-subnav button[data-application]'), function (button) {
+        button.className = button.getAttribute('data-application') === key ? 'active' : '';
+    });
+}
+
+function bindApplicationSwitcher(contentColumn, subnav) {
+    Array.prototype.forEach.call(subnav.querySelectorAll('button[data-application]'), function (button) {
+        button.addEventListener('click', function () {
+            showApplicationPanel(contentColumn, button.getAttribute('data-application'));
+        });
+    });
+    // 支持 report.html#report 这类直达链接
+    if ((window.location.hash || '').replace('#', '') === 'report') {
+        showApplicationPanel(contentColumn, 'report');
+    }
 }
 
 function normalizeAwardLinks() {

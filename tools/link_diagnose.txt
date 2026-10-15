@@ -1,0 +1,157 @@
+待诊断链接 18 条
+
+======================================================================
+序号 7 | 媒体 中工网-工人日报 | 表内状态 404
+标题：兰海：勇于创新和跨界的电网“多面手”
+原链接：https://www.workercn.cn/358/201901/29/190129071751663.shtml
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+  去掉 www -> HTTP 404
+
+======================================================================
+序号 13 | 媒体 中国改革报 | 表内状态 404
+标题：打造新时代电力工匠摇篮
+原链接：http://www.cfgw.net.cn/epaper/content/201912/25/content22801.htm
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+  换 https -> URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn
+  去掉 www -> HTTP 404
+
+======================================================================
+序号 15 | 媒体 广西广播电视台 | 表内状态 404
+标题：南宁：大学生舞龙舞狮队传统技艺舞出精气神
+原链接：https://news.gxtv.cn/article/detail7f4972bfa39e430_6ac1fab6b5a8434b3.html?10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1=&from=singlemessage
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+
+======================================================================
+序号 18 | 媒体 广西日报-广西云客户端 | 表内状态 0
+标题：广西电力职院：发挥专业优势助力乡村振兴
+原链接：http://resource.cloudgx.cn//files/gxapp/News/202012/23/644925.html?isshare=1&t=1608717978
+  普通 GET -> HTTP 200 text/html
+  HEAD -> HTTP 200 text/html
+  加 Referer 同域 -> HTTP 200 text/html
+  换 https -> HTTP 200 text/html
+
+======================================================================
+序号 31 | 媒体 中国教育网络电视台 | 表内状态 0
+标题：南狮舞动“一带一路”以“创”点亮传统文化
+原链接：https://tzpy.centv.cn/article/286
+  普通 GET -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+  HEAD -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+  加 Referer 同域 -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 32 | 媒体 中国教育报 | 表内状态 0
+标题：广西电力职业技术学院实施“三同”改革培养产业升级所需人才
+原链接：http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1_652400938365609402&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5
+  普通 GET -> RemoteDisconnected: Remote end closed connection without response
+  HEAD -> RemoteDisconnected: Remote end closed connection without response
+  加 Referer 同域 -> RemoteDisconnected: Remote end closed connection without response
+  换 https -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 45 | 媒体 中国教育报 | 表内状态 0
+标题：探索“五度”路径共筑电力职教“五化”高地
+原链接：http://app.jyb.cn/zgjybapp/szbwap/detail.html?id=1667777554085616043&n_ewsPaper=%E4%B8%AD%E5%9B%BD%E6%95%99%E8%82%B2%E6%8A%A5
+  普通 GET -> RemoteDisconnected: Remote end closed connection without response
+  HEAD -> RemoteDisconnected: Remote end closed connection without response
+  加 Referer 同域 -> RemoteDisconnected: Remote end closed connection without response
+  换 https -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 49 | 媒体 广西云-广西新闻网 | 表内状态 0
+标题：广西电力职业技术学院面向马来西亚举办系列能源电力国际化培训
+原链接：https://resource.cloudgx.cn/files/gxapp/News/202301/06/990104.html?isshare=1&t=1673005402
+  普通 GET -> HTTP 200 text/html
+  HEAD -> RemoteDisconnected: Remote end closed connection without response
+  加 Referer 同域 -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 60 | 媒体 中国网 | 表内状态 0
+标题：数智赋能·双创聚势，广西电力双创团队助力乡村振兴跑出“加速度”
+原链接：http://zgt.china.com.cn/v2/content/2023-06/19/content34691.html
+  普通 GET -> RemoteDisconnected: Remote end closed connection without response
+  HEAD -> RemoteDisconnected: Remote end closed connection without response
+  加 Referer 同域 -> RemoteDisconnected: Remote end closed connection without response
+  换 https -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 63 | 媒体 光明网 | 表内状态 404
+标题：“两网”深融“电”亮匠心构建“三全育人”新生态
+原链接：https://difang.gmw.cn/2023-08/04/content36745304._htm
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+
+======================================================================
+序号 64 | 媒体 中国教育新闻网 | 表内状态 0
+标题：广西电力职业技术学院：建设文明校园书写发展新篇
+原链接：http://paper.jyb.cn/zgjyb/html/2023-08/10/content627547.ht_m?div=-1
+  普通 GET -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  HEAD -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  加 Referer 同域 -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  换 https -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+
+======================================================================
+序号 73 | 媒体 中国教育新闻网 | 表内状态 0
+标题：广西电力职业技术学院：德技同育培养电力装备智造“匠心”人才
+原链接：http://paper.jyb.cn/zgjyb/html/2023-09/26/content629385.ht_m?div=-1
+  普通 GET -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  HEAD -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  加 Referer 同域 -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  换 https -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+
+======================================================================
+序号 89 | 媒体 中华网（看点时报） | 表内状态 404
+标题：校园创业新星王俊杰：从“梦想家”到“创新创业引领者”
+原链接：https://tech.china.com/article/20240528/052024152_6178.html
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+
+======================================================================
+序号 91 | 媒体 中国日报网（东方网） | 表内状态 404
+标题：(原表未印标题)
+原链接：https://caijing.chinadaily.com.cn/a/202405/28/WS6655942ea3109f7860ddfccf.html
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+
+======================================================================
+序号 98 | 媒体 中国网 | 表内状态 0
+标题：“碳”见未来，引领绿色建材高质量发展
+原链接：http://science.china.com.cn/2024-07/05/content42852632._htm
+  普通 GET -> RemoteDisconnected: Remote end closed connection without response
+  HEAD -> RemoteDisconnected: Remote end closed connection without response
+  加 Referer 同域 -> RemoteDisconnected: Remote end closed connection without response
+  换 https -> URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+======================================================================
+序号 99 | 媒体 中华网 | 表内状态 404
+标题：(原表未印标题)
+原链接：https://tech.china.com/article/20240705/072024154_3961.html
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+
+======================================================================
+序号 107 | 媒体 网易新闻 | 表内状态 404
+标题：“水润未来”开启生态混凝土新篇章
+原链接：https://www.163.com/news/article/JAP436AK00019UD6.html
+  普通 GET -> HTTP 404
+  HEAD -> HTTP 404
+  加 Referer 同域 -> HTTP 404
+  去掉 www -> HTTP 404
+
+======================================================================
+序号 124 | 媒体 中国教育新闻网 | 表内状态 0
+标题：党建引领产教深融打造育人生态链——广西电力职业技术学院电力
+原链接：http://paper.jyb.cn/zgjyb/html/2025-06/02/content14474918__576132.htm
+  普通 GET -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  HEAD -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  加 Referer 同域 -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur
+  换 https -> URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failur

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>四库平台-高职创新创业教育生态共同体的构建与实践</title>
+    <link rel="icon" href="data:,">
+    <style>
+        /* 四库平台是外部站点（超星），整页以 iframe 铺满屏幕，
+           顶部只留一条固定的返回条，用户随时能回本站，不会出现"进去回不来"。 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #EEF2F7;
+            font-family: "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+        }
+
+        .siku-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            height: 4.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            padding: 0 1.1rem;
+            padding-left: max(1.1rem, env(safe-area-inset-left));
+            padding-right: max(1.1rem, env(safe-area-inset-right));
+            box-sizing: border-box;
+            background: #014D98;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            box-shadow: 0 0.12rem 0.4rem rgba(0, 0, 0, 0.22);
+        }
+
+        .siku-bar a,
+        .siku-bar button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            height: 4rem;
+            padding: 0 1.4rem;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.08);
+            color: #FFFFFF;
+            font-size: 1.8rem;
+            font-family: inherit;
+            line-height: 1;
+            text-decoration: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .siku-bar a:hover,
+        .siku-bar button:hover {
+            background: #FFFFFF;
+            color: #014D98;
+            border-color: #FFFFFF;
+        }
+
+        .siku-bar .siku-title {
+            flex: 1 1 auto;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #EAF1FA;
+            font-size: 1.25rem;
+        }
+
+        .siku-frame {
+            display: block;
+            width: 100%;
+            height: calc(100% - 4.6rem);
+            margin-top: 4.6rem;
+            border: 0;
+            background: #FFFFFF;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* 手机上返回条要做成两层：上面一整条是「返回」，下面是「在新窗口打开」，
+           两个按钮都放大一倍后仍放得下，也不会把内容区挤窄。 */
+        @media screen and (max-width: 768px) {
+            .siku-bar {
+                height: 7rem;
+                flex-wrap: wrap;
+                align-content: center;
+                gap: 0.4rem;
+                padding-top: 0.4rem;
+                padding-bottom: 0.4rem;
+            }
+
+            .siku-bar a {
+                flex: 1 1 100%;
+                justify-content: center;
+                height: 3.5rem;
+                font-size: 1.5rem;
+            }
+
+            .siku-bar button {
+                flex: 1 1 100%;
+                justify-content: center;
+                height: 2.2rem;
+                font-size: 1.05rem;
+                border-color: rgba(255, 255, 255, 0.5);
+                color: #EAF1FA;
+            }
+
+            /* 手机上不显示站名，把宽度让给按钮，避免标题被挤成省略号 */
+            .siku-bar .siku-title {
+                display: none;
+            }
+
+            .siku-frame {
+                height: calc(100% - 7rem);
+                margin-top: 7rem;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .siku-bar {
+                height: 6.4rem;
+            }
+
+            .siku-bar a {
+                height: 3.2rem;
+                font-size: 1.35rem;
+            }
+
+            .siku-bar button {
+                height: 2rem;
+                font-size: 1rem;
+            }
+
+            .siku-frame {
+                height: calc(100% - 6.4rem);
+                margin-top: 6.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="siku-bar">
+    <a href="index.html">← 返回网站首页</a>
+    <span class="siku-title">四库平台 · 优质双创课程教学资源库</span>
+    <button type="button" id="open-new">在新窗口打开</button>
+</div><iframe class="siku-frame" src="https://53plyyj9.mh.chaoxing.com/entry/page/3042461/show"
+        title="四库平台" allowfullscreen></iframe>
+<script>
+    // 兜底入口：有些浏览器或网络策略下外部页面可能在 iframe 里显示不全，
+    // 这里保留一个"在新窗口打开"，用户随时能换到完整页面。
+    document.getElementById('open-new').addEventListener('click', function () {
+        window.open('https://53plyyj9.mh.chaoxing.com/entry/page/3042461/show', '_blank', 'noopener');
+    });
+</script>
+</body>
+</html>
